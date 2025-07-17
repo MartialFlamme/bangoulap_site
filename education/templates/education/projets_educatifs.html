@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Projets éducatifs{% endblock %}
+{% block content %}
+<div class="max-w-5xl mx-auto px-4"><br><br>
+    <h1 class="text-3xl font-bold text-emerald-800 mb-6">📚 Projets éducatifs</h1>
+    <div class="space-y-6">
+        {% for projet in projets %}
+        <div class="bg-white p-5 rounded shadow hover:shadow-lg transition">
+            <h2 class="text-xl font-semibold text-emerald-700">{{ projet.titre }}</h2>
+            <p class="mt-2 text-gray-700">{{ projet.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

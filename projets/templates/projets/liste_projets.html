@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Liste des projets - Bangoulap{% endblock %}
+
+{% block content %}
+<section class="max-w-6xl mx-auto px-4 py-10"><br><br>
+    <h1 class="text-3xl font-bold text-green-800 mb-8">📂 Nos projets</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% for projet in projets %}
+        <a href="{% url 'projets:detail' projet_id=projet.id %}" class="block bg-white p-4 rounded-lg shadow hover:shadow-md transition duration-300">
+            {% if projet.image %}
+                <img src="{{ projet.image.url }}" alt="{{ projet.titre }}" class="w-full h-48 object-cover rounded mb-4">
+            {% endif %}
+            <h2 class="text-xl font-semibold text-green-700">{{ projet.titre }}</h2>
+            <p class="text-sm text-gray-600 mt-2">{{ projet.description|truncatechars:100 }}</p>
+            <p class="mt-2 text-gray-500 text-sm">📅 {{ projet.date_lancement|date:"d F Y" }}</p>
+        </a>
+    {% endfor %}
+    </div>
+</section>
+{% endblock %}

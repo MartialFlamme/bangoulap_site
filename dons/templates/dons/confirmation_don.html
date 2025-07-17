@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Confirmation du Don | Bangoulap{% endblock %}
+
+{% block content %}
+<section class="max-w-3xl mx-auto px-6 py-10"><br><br>
+    <h1 class="text-3xl font-bold text-green-800 mb-6">✅ Don confirmé</h1>
+
+    {% if email_envoye %}
+        <div class="bg-green-100 border border-green-400 text-green-800 px-4 py-3 rounded relative mb-6" role="alert">
+            ✅ Un accusé de réception a été envoyé au propriétaire du site.
+        </div>
+    {% endif %}
+
+    <div class="bg-white p-6 rounded-lg shadow-md text-gray-800 space-y-5 border-l-4 border-green-600">
+        <p class="flex items-center text-lg"><span class="mr-2">👤</span><strong>Nom :</strong> {{ don.nom }}</p>
+        <p class="flex items-center text-lg"><span class="mr-2">📧</span><strong>Email :</strong> {{ don.email }}</p>
+        <p class="flex items-center text-lg"><span class="mr-2">📱</span><strong>Numéro :</strong> {{ don.numero }}</p>
+        <p class="flex items-center text-lg"><span class="mr-2">💰</span><strong>Montant :</strong> {{ don.montant }} FCFA</p>
+        <p class="flex items-center text-lg"><span class="mr-2">💳</span><strong>Moyen de paiement :</strong> {{ don.get_moyen_display }}</p>
+        <p class="flex items-center text-lg"><span class="mr-2">🕒</span><strong>Date :</strong> {{ don.created_at|date:"d F Y à H:i" }}</p>
+    </div>
+
+    <div class="bg-green-50 p-4 mt-6 rounded shadow">
+        <h2 class="text-xl font-semibold text-green-700 mb-3">📦 Détails du projet soutenu</h2>
+        <p><strong>Titre :</strong> {{ don.projet.titre }}</p>
+        <p><strong>Date de lancement :</strong> {{ don.projet.date_lancement|date:"d F Y" }}</p>
+        <p class="mt-2 text-gray-700"><strong>Description :</strong><br>{{ don.projet.description }}</p>
+    </div>
+
+    <div class="mt-8 text-center">
+        <a href="{% url 'core:accueil' %}" class="bg-green-700 text-white px-6 py-2 rounded hover:bg-green-800 transition duration-300">
+            🏠 Retour à l'accueil
+        </a>
+    </div>
+</section>
+{% endblock %}

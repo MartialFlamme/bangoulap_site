@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Accueil | Bangoulap{% endblock %}
+
+{% block content %}
+<section class="bg-white"><br><br>
+    <!-- Message de bienvenue -->
+    <div class="text-center py-12 px-4 sm:px-6 lg:px-8">
+        <h1 id="taille" class="text-4xl font-bold text-green-800">
+            Bienvenu chez sa majesté YONKEU KUIKA Jean, Roi de BANGOULAP.
+        </h1><br>
+        <div id="roi">
+            <img src="../../../static/images/chef2-bangoulap.jpeg" alt="Roi du village">
+            <p id="send" class="mt-4 text-gray-600 italic">{{ village.roi.message }}</p>
+        </div>    
+    </div>
+
+    <!-- Slider d'images -->
+    <div class="relative w-full max-w-5xl mx-auto overflow-hidden rounded-lg shadow-lg">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                {% for image in images_slider %}
+                    <div class="swiper-slide">
+                        <img src="{% static image.src %}" alt="{{ image.alt }}" class="w-full h-64 object-cover">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Informations sur le village -->
+    <div class="mt-12 max-w-4xl mx-auto px-6">
+        <div class="bg-yellow-50 border-l-4 border-green-700 p-6 rounded-lg shadow-md transition hover:shadow-lg">
+            <h2 class="text-2xl font-semibold text-green-900 mb-4">À propos de BANGOULAP</h2>
+            <ul class="space-y-2 text-gray-700">
+                <li><strong>🌍 Geographie :</strong> {{ village.geographie }}</li>
+                <li><strong>🧬 Origine :</strong> {{ village.origine }}</li>
+                <li><strong>👥 Population :</strong> {{ village.population }}</li>
+                <li><strong>🏘️ Chefferie traditionnelle et quartiers :</strong> {{ village.chefferie }}</li>
+                <li><strong>🏡 Village :</strong> {{ village.village }}</li>
+                <li><strong>🎭 Culture :</strong> {{ village.culture }}</li>
+                <li><strong>📸 Tourisme :</strong> {{ village.tourisme }}</li>
+                <li><strong>⭐ Personnalités liées au village :</strong> {{ village.personnalite }}</li>
+            </ul>
+        </div>
+    </div><br><br>
+</section>
+
+<!-- Swiper.js -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+        },
+        effect: "fade",
+    });
+</script>
+{% endblock %}

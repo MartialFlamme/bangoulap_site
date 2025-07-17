@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Académie hôtelière{% endblock %}
+{% block content %}
+<div class="max-w-4xl mx-auto px-4">
+    <h1 class="text-3xl font-bold text-indigo-800 mb-6">🏫 {{ contenu.nom }}</h1>
+    <img src="../../../static/images/academie_hoteliere.PNG" alt="{{ contenu.nom }}" class="w-full rounded-lg shadow mb-4">
+    <div class="bg-indigo-50 p-6 rounded text-gray-800 leading-relaxed text-justify">
+        {{ contenu.description }}
+    </div>
+</div>
+{% endblock %}

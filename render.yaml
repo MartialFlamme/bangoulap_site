@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: bangoulap-site
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn bangoulap_site.wsgi"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: "bangoulap_site.settings"
+      - key: PYTHON_VERSION
+        value: "3.10"
+      - key: SECRET_KEY
+        value: "i4-(l89cv&rli^fk!7mtoc48)tz)=r)y11$ta&bwj120#xdu8w"
+

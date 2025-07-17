@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Galerie Photo - Bangoulap{% endblock %}
+
+{% block content %}
+<section class="bg-white py-12"><br><br>
+    <div class="max-w-6xl mx-auto px-4">
+        <h1 class="text-3xl font-bold text-green-800 text-center mb-6">📸 Galerie Photo</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {% for photo in photos %}
+                <div class="rounded overflow-hidden shadow hover:shadow-lg transition duration-300 bg-white">
+                    <img src="{{ photo.image.url }}" alt="{{ photo.titre }}" class="w-full h-56 object-cover">
+                    <div class="p-4 bg-green-50 text-center">
+                        <h2 class="font-semibold text-lg text-green-800">{{ photo.titre }}</h2>
+                        {% if photo.evenement %}
+                            <p class="text-sm text-gray-600 italic">📅 Événement : {{ photo.evenement }}</p>
+                        {% endif %}
+                        <p class="text-xs text-gray-400 mt-1">Ajoutée le {{ photo.date|date:"d M Y" }}</p>
+                    </div>
+                </div>
+            {% empty %}
+                <p class="text-center col-span-3 text-gray-500">Aucune photo disponible pour le moment.</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

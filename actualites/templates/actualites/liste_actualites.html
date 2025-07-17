@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Actualités{% endblock %}
+{% load static %}
+{% block content %}
+<div class="max-w-5xl mx-auto px-4"><br><br>
+    <h1 class="text-3xl font-bold text-green-800 mb-6">Dernières actualités</h1>
+    <div class="space-y-6">
+        {% for article in actualites %}
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h2 class="text-xl font-semibold text-green-700">
+                <a href="{% url 'actualites:detail' slug=article.slug %}" class="hover:underline">
+                    {{ article.titre }}
+                </a>
+            </h2>
+            <p class="text-sm text-gray-500">{{ article.date }} - {{ article.auteur }}</p>
+            <p class="mt-2 text-gray-700">{{ article.contenu|truncatewords:25 }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

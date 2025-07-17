@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Structure communautaire | Bangoulap{% endblock %}
+
+{% block content %}
+<section class="max-w-4xl mx-auto px-6 py-10"><br><br>
+    <h1 class="text-3xl font-bold text-green-800 mb-6">🏛️ Structure Communautaire</h1>
+
+    <div class="bg-white border-l-4 border-green-700 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+        <p class="mb-6 text-gray-800 text-lg">
+            👑 <strong>Roi actuel :</strong> {{ structure.roi}}
+        </p>
+
+        <h2 class="text-xl font-semibold text-green-700 mb-4">Organismes clés</h2>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+            {% for org in structure.organismes %}
+                <li>{{ org }}</li>
+            {% empty %}
+                <li>Aucun organisme répertorié pour le moment.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endblock %}

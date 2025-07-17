@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Sites touristiques{% endblock %}
+{% block content %}
+<div class="max-w-5xl mx-auto px-4"><br><br>
+    <h1 class="text-3xl font-bold text-blue-800 mb-6">🏞️ Sites touristiques à découvrir</h1>
+    <div class="grid gap-6 md:grid-cols-2">
+        {% for site in sites %}
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h2 class="text-xl font-semibold text-blue-700">{{ site.nom }}</h2>
+            <p class="mt-2 text-gray-700">{{ site.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

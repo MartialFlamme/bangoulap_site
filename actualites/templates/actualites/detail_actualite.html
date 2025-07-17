@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ actualite.titre }}{% endblock %}
+{% block content %}
+<div class="max-w-4xl mx-auto px-4"><br><br>
+    <article class="bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold text-green-900 mb-4">{{ actualite.titre }}</h1>
+        <p class="text-sm text-gray-500 mb-2">{{ actualite.date }} - {{ actualite.auteur }}</p>
+        {% if actualite.image %}
+        <img src="{{ actualite.image.url }}" alt="{{ actualite.titre }}" class="w-full rounded mb-4">
+        {% endif %}
+        <div class="text-gray-800 leading-relaxed">{{ actualite.contenu|linebreaks }}</div>
+    </article>
+</div>
+{% endblock %}

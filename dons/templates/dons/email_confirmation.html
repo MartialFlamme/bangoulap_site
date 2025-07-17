@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation de Don</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            margin: auto;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #2f855a;
+        }
+
+        h2 {
+            color: #2f855a;
+        }
+
+        .field {
+            margin: 12px 0;
+            font-size: 15px;
+        }
+
+        .field span {
+            display: inline-block;
+            width: 160px;
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: #777;
+        }
+
+        .emoji {
+            margin-right: 6px;
+        }
+
+        .project-box {
+            background-color: #f0fdf4;
+            border: 1px solid #c6f6d5;
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin-top: 12px;
+        }
+
+        .project-box h4 {
+            color: #276749;
+            margin-bottom: 6px;
+        }
+
+        .project-box p {
+            font-size: 14px;
+            color: #444;
+            margin: 2px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🎉 Nouveau Don Confirmé</h2>
+
+        <div class="field">
+            <span class="emoji">👤</span><span>Nom :</span> {{ don.nom }}
+        </div>
+        <div class="field">
+            <span class="emoji">📧</span><span>Email :</span> {{ don.email }}
+        </div>
+        <div class="field">
+            <span class="emoji">📱</span><span>Numéro :</span> {{ don.numero }}
+        </div>
+        <div class="field">
+            <span class="emoji">💰</span><span>Montant :</span> {{ don.montant }} FCFA
+        </div>
+        <div class="field">
+            <span class="emoji">💳</span><span>Moyen :</span> {{ don.get_moyen_display }}
+        </div>
+        <div class="field">
+            <span class="emoji">📦</span><span>Projet soutenu :</span> {{ don.projet.titre }}
+        </div>
+        <div class="field">
+            <span class="emoji">🕒</span><span>Date :</span> {{ don.created_at|date:"d F Y à H:i" }}
+        </div>
+
+        <div class="project-box">
+            <h4>📌 Détails du projet soutenu</h4>
+            <p><strong>Titre :</strong> {{ don.projet.titre }}</p>
+            <p><strong>Date de lancement :</strong> {{ don.projet.date_lancement|date:"d F Y" }}</p>
+            <p><strong>Description :</strong><br> {{ don.projet.description }}</p>
+        </div>
+
+        <div class="footer">
+            Vous recevez ce message car un utilisateur a validé un don via le site de Bangoulap.<br>
+            Merci pour votre soutien 🙏
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% block title %}Faire un don | Bangoulap{% endblock %}
+
+{% block content %}
+<section class="max-w-3xl mx-auto px-6 py-10"><br><br>
+    <h1 class="text-3xl font-bold text-green-800 mb-6">🎁 Faire un don</h1>
+
+    {% if form.errors %}
+        <div class="bg-red-100 border border-red-300 text-red-800 p-4 rounded mb-6">
+            ❌ Merci de corriger les erreurs ci-dessous.
+        </div>
+    {% endif %}
+
+    <form method="post" class="bg-white p-6 rounded-lg shadow-md space-y-5">
+        {% csrf_token %}
+
+        <div>
+            <label for="{{ form.nom.id_for_label }}" class="block text-sm font-medium text-gray-700">
+                {{ form.nom.label }}
+            </label>
+            {{ form.nom|add_class:"mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-green-300" }}
+        </div>
+
+        <div>
+            <label for="{{ form.email.id_for_label }}" class="block text-sm font-medium text-gray-700">
+                {{ form.email.label }}
+            </label>
+            {{ form.email|add_class:"mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-green-300" }}
+        </div>
+
+        <div>
+            <label for="{{ form.numero.id_for_label }}" class="block text-sm font-medium text-gray-700">
+                {{ form.numero.label }}
+            </label>
+            {{ form.numero|add_class:"mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-green-300" }}
+        </div>
+
+        <div>
+            <label for="{{ form.montant.id_for_label }}" class="block text-sm font-medium text-gray-700">
+                {{ form.montant.label }}
+            </label>
+            {{ form.montant|add_class:"mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-green-300" }}
+        </div>
+
+        <div>
+            <label for="{{ form.moyen.id_for_label }}" class="block text-sm font-medium text-gray-700">
+                {{ form.moyen.label }}
+            </label>
+            {{ form.moyen|add_class:"mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-green-300" }}
+        </div>
+
+        <div>
+            <label for="{{ form.projet.id_for_label }}" class="block text-sm font-medium text-gray-700">
+                {{ form.projet.label }}
+            </label>
+            {{ form.projet|add_class:"mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-green-300" }}
+        </div>
+
+
+        <div>
+            <button type="submit"
+                    class="bg-green-700 text-white font-medium px-6 py-2 rounded hover:bg-green-800 transition duration-300">
+                💸 Valider le don
+            </button>
+        </div>
+    </form>
+</section>
+{% endblock %}

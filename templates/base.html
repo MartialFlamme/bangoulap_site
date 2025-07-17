@@ -1,0 +1,347 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Bangoulap - Village Camerounais{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Style personnalisé -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    
+    <!-- Font Awesome (à inclure UNE seule fois et AVANT la fermeture du </head>) -->
+    <script src="https://kit.fontawesome.com/a2f67d4f95.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/favicon.png' %}">
+    <style>
+        body::before {
+          content: "";
+          position: fixed; /* ou absolute si tu veux que ça défile avec le contenu */
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url("{% static 'images/photo.jpg' %}");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          opacity: 0.5; /* rend l’image moins claire */
+          z-index: -1;  /* la place derrière tout le reste */
+          pointer-events: none; /* ne bloque pas les clics sur le contenu */
+        }
+        .transition-transform {
+          transition: transform 0.3s ease-in-out;
+        }
+        /* Structure principale */
+        #roi {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          flex-wrap: wrap; /* pour gérer le retour à la ligne sur mobile */
+        }
+
+        #roi img {
+          width: 35%;
+          max-width: 300px;
+          height: auto;
+          border-radius: 12px;
+        }
+
+        /* Titre principal */
+        #taille {
+          font-size: 2.5rem; /* ~40px */
+          line-height: 1.4;
+        }
+
+        /* Texte du message */
+        #send {
+          font-size: 1.5rem; /* ~24px */
+          line-height: 1.6;
+          max-width: 500px;
+        }
+
+        /* Responsive pour mobile */
+        @media screen and (max-width: 640px) {
+          #roi {
+            flex-direction: column;
+            text-align: center;
+          }
+
+          #taille {
+            font-size: 1.8rem; /* ~28px */
+          }
+
+          #send {
+            font-size: 1.2rem; /* ~19px */
+            padding: 0 10px;
+          }
+
+          #roi img {
+            width: 80%;
+          }
+}
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100 text-gray-800">
+
+  <!-- ✅ HEADER -->
+  <header id="site-header" class="fixed top-0 left-0 w-full bg-green-900 text-white z-50 transition-transform duration-300">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
+
+    <!-- ✅ Logo + Titre visible en mobile et desktop -->
+    <div class="flex items-center space-x-3">
+      <a href="{% url 'core:accueil' %}" class="flex items-center space-x-2 hover:text-yellow-300 transition">
+        <img src="{% static 'images/logo_village.jpg' %}" alt="Logo" class="w-10 h-10 rounded-full border border-white shadow-sm">
+        <span class="text-lg font-semibold"><B>BANGOULAP au cœur du livre</B></span> <!-- ✅ visible partout -->
+      </a>
+    </div>
+
+    <!-- ✅ Menu Desktop -->
+    <nav class="hidden md:flex space-x-4 text-sm">
+      <a href="{% url 'core:accueil' %}" class="hover:text-yellow-300 transition">🏠 Accueil</a>
+
+      <!-- 📚 Actualités -->
+      <div class="relative group">
+        <a href="{% url 'actualites:liste' %}" class="hover:text-yellow-300 transition">📰 Actualités</a>
+        <div class="absolute hidden group-hover:block bg-green-800 mt-2 rounded shadow-md z-50">
+          <a href="{% url 'actualites:liste' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">🗂️ Liste des actualités</a>
+          <a href="{% url 'actualites:calendrier' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">📅 Calendrier</a>
+        </div>
+      </div>
+
+      <!-- 🎭 Culture -->
+      <div class="relative group">
+        <a href="{% url 'culture:danses' %}" class="hover:text-yellow-300 transition">🎭 Culture</a>
+        <div class="absolute hidden group-hover:block bg-green-800 mt-2 rounded shadow-md z-50">
+          <a href="{% url 'culture:danses' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">💃 Danses</a>
+          <a href="{% url 'culture:festivals' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">🎉 Festivals</a>
+          <a href="{% url 'culture:structure' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">🏛️ Structure</a>
+        </div>
+      </div>
+
+      <!-- 🏰 Histoire -->
+      <div class="relative group">
+        <a href="{% url 'histoire:origines' %}" class="hover:text-yellow-300 transition">🏰 Histoire</a>
+        <div class="absolute hidden group-hover:block bg-green-800 mt-2 rounded shadow-md z-50">
+          <a href="{% url 'histoire:origines' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">📜 Origines</a>
+          <a href="{% url 'histoire:sites_touristiques' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">🏞️ Sites touristiques</a>
+        </div>
+      </div>
+
+      <!-- 👥 Personnalités -->
+      <div class="relative group">
+        <a href="{% url 'personnalites:liste' %}" class="hover:text-yellow-300 transition">👤 Personnalités</a>
+        <div class="absolute hidden group-hover:block bg-green-800 mt-2 rounded shadow-md z-50">
+          <a href="{% url 'personnalites:liste' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">📃 Liste des personnalités</a>
+        </div>
+      </div>
+
+      <!-- 🤝 Associations -->
+      <div class="relative group">
+        <a href="{% url 'associations:liste' %}" class="hover:text-yellow-300 transition">🤝 Associations</a>
+        <div class="absolute hidden group-hover:block bg-green-800 mt-2 rounded shadow-md z-50">
+          <a href="{% url 'associations:liste' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">📋 Liste des associations</a>
+        </div>
+      </div>
+
+      <!-- 🎓 Éducation -->
+      <div class="relative group">
+        <a href="{% url 'education:projets_educatifs' %}" class="hover:text-yellow-300 transition">🎓 Éducation</a>
+        <div class="absolute hidden group-hover:block bg-green-800 mt-2 rounded shadow-md z-50">
+          <a href="{% url 'education:projets_educatifs' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">📚 Projets éducatifs</a>
+          <a href="{% url 'education:academie_hoteliere' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">🏫 Académie Hôtelière</a>
+        </div>
+      </div>
+
+      <!-- 🚧 Projets -->
+      <div class="relative group">
+        <a href="{% url 'projets:liste_projets' %}" class="hover:text-yellow-300 transition">🚧 Projets</a>
+        <div class="absolute hidden group-hover:block bg-green-800 mt-2 rounded shadow-md z-50">
+          <a href="{% url 'projets:liste_projets' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">📋 Liste des projets</a>
+        </div>
+      </div>
+
+      <!-- 🖼️ Galerie -->
+      <div class="relative group">
+        <a href="{% url 'galerie:photos' %}" class="hover:text-yellow-300 transition">🖼️ Galerie</a>
+        <div class="absolute hidden group-hover:block bg-green-800 mt-2 rounded shadow-md z-50">
+          <a href="{% url 'galerie:photos' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">📸 Photos</a>
+          <a href="{% url 'galerie:videos' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">🎥 Vidéos</a>
+        </div>
+      </div>
+
+        <!-- Autres -->
+       <a href="{% url 'contact:contact' %}" class="hover:text-yellow-300 transition">📬 Contact</a>
+        <div class="relative group">
+            <a href="{% url 'dons:formulaire' %}" class="hover:text-yellow-300 transition">💸 Dons</a>
+            <div class="absolute hidden group-hover:block bg-green-800 mt-2 rounded shadow-md z-50">
+                <a href="{% url 'dons:formulaire' %}" class="block px-4 py-2 text-sm text-white hover:bg-green-700 transition">📝 Faire un don</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ✅ Mobile toggle -->
+    <div class="md:hidden">
+      <button id="menu-toggle" class="focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ✅ Menu Mobile -->
+  <div id="mobile-menu" class="hidden md:hidden px-4 py-3 space-y-2 bg-green-800 text-sm">
+
+    <!-- Accueil -->
+    <a href="{% url 'core:accueil' %}" class="block hover:text-yellow-300">🏠 Accueil</a>
+
+    <!-- Actualités -->
+    <details class="bg-green-800 rounded">
+      <summary class="text-white px-4 py-2 cursor-pointer hover:text-yellow-300 transition">📰 Actualités</summary>
+      <div class="ml-4 text-sm text-white py-2">
+        <a href="{% url 'actualites:liste' %}" class="block px-2 py-1 hover:bg-green-700 rounded">🗂️ Liste des actualités</a>
+        <a href="{% url 'actualites:calendrier' %}" class="block px-2 py-1 hover:bg-green-700 rounded">📅 Calendrier</a>
+      </div>
+    </details>
+
+    <!-- Culture -->
+    <details class="bg-green-800 rounded">
+      <summary class="text-white px-4 py-2 cursor-pointer hover:text-yellow-300 transition">🎭 Culture</summary>
+      <div class="ml-4 text-sm text-white py-2">
+        <a href="{% url 'culture:danses' %}" class="block px-2 py-1 hover:bg-green-700 rounded">💃 Danses</a>
+        <a href="{% url 'culture:festivals' %}" class="block px-2 py-1 hover:bg-green-700 rounded">🎉 Festivals</a>
+        <a href="{% url 'culture:structure' %}" class="block px-2 py-1 hover:bg-green-700 rounded">🏛️ Structure</a>
+      </div>
+    </details>
+
+    <!-- Histoire -->
+    <details class="bg-green-800 rounded">
+      <summary class="text-white px-4 py-2 cursor-pointer hover:text-yellow-300 transition">🏰 Histoire</summary>
+      <div class="ml-4 text-sm text-white py-2">
+        <a href="{% url 'histoire:origines' %}" class="block px-2 py-1 hover:bg-green-700 rounded">📜 Origines</a>
+        <a href="{% url 'histoire:sites_touristiques' %}" class="block px-2 py-1 hover:bg-green-700 rounded">🏞️ Sites touristiques</a>
+      </div>
+    </details>
+
+    <!-- Personnalités -->
+    <details class="bg-green-800 rounded">
+      <summary class="text-white px-4 py-2 cursor-pointer hover:text-yellow-300 transition">👤 Personnalités</summary>
+      <div class="ml-4 text-sm text-white py-2">
+        <a href="{% url 'personnalites:liste' %}" class="block px-2 py-1 hover:bg-green-700 rounded">📃 Liste des personnalités</a>
+      </div>
+    </details>
+
+    <!-- Associations -->
+    <details class="bg-green-800 rounded">
+      <summary class="text-white px-4 py-2 cursor-pointer hover:text-yellow-300 transition">🤝 Associations</summary>
+      <div class="ml-4 text-sm text-white py-2">
+        <a href="{% url 'associations:liste' %}" class="block px-2 py-1 hover:bg-green-700 rounded">📋 Liste des associations</a>
+      </div>
+    </details>
+
+    <!-- Éducation -->
+    <details class="bg-green-800 rounded">
+      <summary class="text-white px-4 py-2 cursor-pointer hover:text-yellow-300 transition">🎓 Éducation</summary>
+      <div class="ml-4 text-sm text-white py-2">
+        <a href="{% url 'education:projets_educatifs' %}" class="block px-2 py-1 hover:bg-green-700 rounded">📚 Projets éducatifs</a>
+        <a href="{% url 'education:academie_hoteliere' %}" class="block px-2 py-1 hover:bg-green-700 rounded">🏫 Académie Hôtelière</a>
+      </div>
+    </details>
+
+    <!-- Projets -->
+    <details class="bg-green-800 rounded">
+      <summary class="text-white px-4 py-2 cursor-pointer hover:text-yellow-300 transition">🚧 Projets</summary>
+      <div class="ml-4 text-sm text-white py-2">
+        <a href="{% url 'projets:liste_projets' %}" class="block px-2 py-1 hover:bg-green-700 rounded">📋 Liste des projets</a>
+      </div>
+    </details>
+
+    <!-- Galerie -->
+    <details class="bg-green-800 rounded">
+      <summary class="text-white px-4 py-2 cursor-pointer hover:text-yellow-300 transition">🖼️ Galerie</summary>
+      <div class="ml-4 text-sm text-white py-2">
+        <a href="{% url 'galerie:photos' %}" class="block px-2 py-1 hover:bg-green-700 rounded">📸 Photos</a>
+        <a href="{% url 'galerie:videos' %}" class="block px-2 py-1 hover:bg-green-700 rounded">🎥 Vidéos</a>
+      </div>
+    </details>
+
+    <!-- Divers -->
+    <a href="{% url 'contact:contact' %}" class="block hover:text-yellow-300">📬 Contact</a>
+    <details class="bg-green-800 rounded">
+        <summary class="text-white px-4 py-2 cursor-pointer hover:text-yellow-300 transition">💸 Dons</summary>
+        <div class="ml-4 text-sm text-white py-2">
+            <a href="{% url 'dons:formulaire' %}" class="block px-2 py-1 hover:bg-green-700 rounded transition">📝 Faire un don</a>
+        </div>
+    </details>
+
+ </div>
+</header>
+
+<!-- ✅ MAIN CONTENT -->
+<main class="flex-grow py-8">
+    <div class="max-w-6xl mx-auto px-4">
+        {% block content %}
+        <!-- Le contenu dynamique des pages enfants s’affichera ici -->
+        {% endblock %}
+    </div>
+</main>
+
+<!-- ✅ FOOTER -->
+<footer class="bg-green-800 text-white shadow sticky top-0 z-50">
+  <div class="container text-center"><br>
+    <p class="mb-3">Copyright © 2025 Bangoulap</p>
+    <p class="mb-3">Suivez-nous sur les réseaux sociaux</p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="https://web.facebook.com/search_results/?q=bangoulap+ouest+cameroon" target="_blank">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="https://youtu.be/X8aTm4r4jUo?si=arZRVVIVFlufOQ6k" target="_blank">
+          <i class="bi bi-youtube"></i>
+      </a>
+      <a href="https://wa.me/237698275470" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+    </div><br>
+  </div>
+</footer>
+
+<!-- ✅ JS pour menu mobile -->
+<script>
+      let lastScrollTop = 0;
+  const header = document.getElementById("site-header");
+
+  window.addEventListener("scroll", function () {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      // Scroll vers le bas → cache le header
+      header.style.transform = "translateY(-100%)";
+    } else {
+      // Scroll vers le haut → montre le header
+      header.style.transform = "translateY(0)";
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+</script>
+<!-- Bootstrap JS via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

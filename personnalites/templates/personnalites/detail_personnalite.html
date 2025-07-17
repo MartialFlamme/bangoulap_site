@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ personne.nom }} | Bangoulap{% endblock %}
+
+{% block content %}
+<section class="max-w-4xl mx-auto px-6 py-10"><br><br>
+    <h1 class="text-3xl font-bold text-green-800 mb-6">👤 {{ personne.nom }}</h1>
+
+    {% if personne.photo %}
+        <img src="{{ personne.photo.url }}" alt="{{ personne.nom }}" class="w-full rounded-lg shadow-md mb-6">
+    {% else %}
+        <p class="text-red-600 font-semibold mb-6">Aucune photo disponible pour cette personnalité.</p>
+    {% endif %}
+
+    <h2 class="text-xl font-semibold text-gray-700 mb-2">Fonction</h2>
+    <B><p class="mb-4 text-gray-600">📌 {{ personne.fonction }}</p></B>
+
+    <h2 class="text-xl font-semibold text-gray-700 mb-2">Biographie</h2>
+    <div class="bg-gray-100 p-6 rounded text-justify leading-relaxed text-gray-800">
+        {{ personne.biographie }}
+    </div>
+</section>
+{% endblock %}
