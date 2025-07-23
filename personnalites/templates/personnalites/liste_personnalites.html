@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %} Personnalités de Bangoulap{% endblock %}
+
 {% block content %}
 <section class="max-w-6xl mx-auto px-4 py-10"><br><br>
-    <h1 class="text-3xl font-bold text-green-800 mb-8">👥 Nos personnalités marquantes</h1>
+    <h1 class="text-3xl font-bold text-green-800 mb-8 scroll-anim">👥 Nos personnalités marquantes</h1>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {% for personne in personnalites %}
-        <a href="{% url 'personnalites:detail' slug=personne.slug %}" class="group block bg-white rounded-lg shadow hover:shadow-xl transition p-4 text-center">
+        <a href="{% url 'personnalites:detail' slug=personne.slug %}" class="group block bg-white rounded-lg shadow hover:shadow-xl transition p-4 text-center scroll-anim">
             {% if personne.photo %}
-                <img src="{{ personne.photo.url }}" alt="{{ personne.nom }}" class="w-32 h-32 mx-auto object-cover rounded-full border-4 border-green-700 group-hover:scale-105 transition">
+                <img src="{{ personne.photo.url }}" alt="{{ personne.nom }}" class="w-32 h-32 mx-auto object-cover rounded-full border-4 border-green-700 group-hover:scale-105 transition duration-300">
             {% else %}
                 <div class="w-32 h-32 mx-auto flex items-center justify-center bg-gray-200 text-gray-500 rounded-full border-4 border-green-700">
                     🙈
@@ -19,8 +20,32 @@
             <p class="text-sm text-gray-600 italic">{{ personne.fonction }}</p>
         </a>
         {% empty %}
-        <p class="text-gray-600 italic">Aucune personnalité enregistrée pour le moment.</p>
+        <p class="text-gray-600 italic scroll-anim">Aucune personnalité enregistrée pour le moment.</p>
         {% endfor %}
     </div>
 </section>
+
+<style>
+    .scroll-anim {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .scroll-anim.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+
+<script>
+    const scrollElements = document.querySelectorAll('.scroll-anim');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            entry.target.classList.toggle('show', entry.isIntersecting);
+        });
+    }, { threshold: 0.1 });
+
+    scrollElements.forEach(el => observer.observe(el));
+</script>
 {% endblock %}

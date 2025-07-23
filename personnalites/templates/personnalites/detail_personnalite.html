@@ -5,20 +5,53 @@
 
 {% block content %}
 <section class="max-w-4xl mx-auto px-6 py-10"><br><br>
-    <h1 class="text-3xl font-bold text-green-800 mb-6">👤 {{ personne.nom }}</h1>
+    <h1 class="text-3xl font-bold text-green-800 mb-6 scroll-anim">👤 {{ personne.nom }}</h1>
 
     {% if personne.photo %}
-        <img src="{{ personne.photo.url }}" alt="{{ personne.nom }}" class="w-full rounded-lg shadow-md mb-6">
+        <img src="{{ personne.photo.url }}" alt="{{ personne.nom }}" class="w-full rounded-lg shadow-md mb-6 scroll-anim">
     {% else %}
-        <p class="text-red-600 font-semibold mb-6">Aucune photo disponible pour cette personnalité.</p>
+        <p class="text-red-600 font-semibold mb-6 scroll-anim">Aucune photo disponible pour cette personnalité.</p>
     {% endif %}
 
-    <h2 class="text-xl font-semibold text-gray-700 mb-2">Fonction</h2>
-    <B><p class="mb-4 text-gray-600">📌 {{ personne.fonction }}</p></B>
+    <h2 class="text-xl font-semibold text-gray-700 mb-2 scroll-anim">Fonction</h2>
+    <b><p class="mb-4 text-gray-600 scroll-anim">📌 {{ personne.fonction }}</p></b>
 
-    <h2 class="text-xl font-semibold text-gray-700 mb-2">Biographie</h2>
-    <div class="bg-gray-100 p-6 rounded text-justify leading-relaxed text-gray-800">
+    <h2 class="text-xl font-semibold text-gray-700 mb-2 scroll-anim">Biographie</h2>
+    <div class="bg-gray-100 p-6 rounded text-justify leading-relaxed text-gray-800 scroll-anim">
         {{ personne.biographie }}
     </div>
 </section>
+
+<style>
+    .scroll-anim {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .scroll-anim.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+
+<script>
+    const scrollElems = document.querySelectorAll('.scroll-anim');
+
+    const scrollCallback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(scrollCallback, {
+        threshold: 0.1
+    });
+
+    scrollElems.forEach(el => observer.observe(el));
+</script>
 {% endblock %}

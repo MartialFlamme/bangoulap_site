@@ -4,19 +4,20 @@
 
 {% block content %}
 <section class="bg-white"><br><br>
+
     <!-- Message de bienvenue -->
-    <div class="text-center py-12 px-4 sm:px-6 lg:px-8">
+    <div class="text-center py-12 px-4 sm:px-6 lg:px-8 reveal opacity-0 translate-y-6 transition-all duration-700">
         <h1 id="taille" class="text-4xl font-bold text-green-800">
             Bienvenu chez sa majesté YONKEU KUIKA Jean, Roi de BANGOULAP.
         </h1><br>
         <div id="roi">
-            <img src="../../../static/images/chef2-bangoulap.jpeg" alt="Roi du village">
+            <img src="../../../static/images/chef2-bangoulap.jpeg" alt="Roi du village" class="mx-auto rounded-md shadow-md">
             <p id="send" class="mt-4 text-gray-600 italic">{{ village.roi.message }}</p>
         </div>    
     </div>
 
     <!-- Slider d'images -->
-    <div class="relative w-full max-w-5xl mx-auto overflow-hidden rounded-lg shadow-lg">
+    <div class="relative w-full max-w-5xl mx-auto overflow-hidden rounded-lg shadow-lg reveal opacity-0 translate-y-6 transition-all duration-700">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 {% for image in images_slider %}
@@ -29,7 +30,7 @@
     </div>
 
     <!-- Informations sur le village -->
-    <div class="mt-12 max-w-4xl mx-auto px-6">
+    <div class="mt-12 max-w-4xl mx-auto px-6 reveal opacity-0 translate-y-6 transition-all duration-700">
         <div class="bg-yellow-50 border-l-4 border-green-700 p-6 rounded-lg shadow-md transition hover:shadow-lg">
             <h2 class="text-2xl font-semibold text-green-900 mb-4">À propos de BANGOULAP</h2>
             <ul class="space-y-2 text-gray-700">
@@ -56,6 +57,25 @@
             delay: 3000,
         },
         effect: "fade",
+    });
+</script>
+
+<!-- Animation scroll -->
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-visible');
+                entry.target.classList.remove('opacity-0', 'translate-y-6');
+            } else {
+                entry.target.classList.remove('animate-visible');
+                entry.target.classList.add('opacity-0', 'translate-y-6');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach((el) => {
+        observer.observe(el);
     });
 </script>
 {% endblock %}

@@ -3,14 +3,35 @@
 {% block title %}Sites touristiques{% endblock %}
 {% block content %}
 <div class="max-w-5xl mx-auto px-4"><br><br>
-    <h1 class="text-3xl font-bold text-blue-800 mb-6">🏞️ Sites touristiques à découvrir</h1>
+    <h1 class="text-3xl font-bold text-blue-800 mb-6 reveal opacity-0 translate-y-6 transition-all duration-700">
+        🏞️ Sites touristiques à découvrir
+    </h1>
     <div class="grid gap-6 md:grid-cols-2">
         {% for site in sites %}
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition reveal opacity-0 translate-y-6 transition-all duration-700">
             <h2 class="text-xl font-semibold text-blue-700">{{ site.nom }}</h2>
             <p class="mt-2 text-gray-700">{{ site.description }}</p>
         </div>
         {% endfor %}
     </div>
 </div>
+
+<!-- Animation scroll : déclenche à chaque scroll vers le bas ou le haut -->
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-visible');
+                entry.target.classList.remove('opacity-0', 'translate-y-6');
+            } else {
+                entry.target.classList.remove('animate-visible');
+                entry.target.classList.add('opacity-0', 'translate-y-6');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach((el) => {
+        observer.observe(el);
+    });
+</script>
 {% endblock %}
