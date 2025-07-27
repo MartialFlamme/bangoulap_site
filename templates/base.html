@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>{% block title %}Bangoulap - Village Camerounais{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- Bootstrap CSS via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -45,7 +46,6 @@
           flex-direction: row;
           align-items: center;
           justify-content: center;
-          gap: 20px;
           flex-wrap: wrap; /* pour gérer le retour à la ligne sur mobile */
         }
         .animate-on-scroll {
@@ -299,7 +299,7 @@
 
 <!-- ✅ MAIN CONTENT -->
 <main class="flex-grow py-8">
-    <div class="max-w-6xl mx-auto px-3">
+    <div class="max-w-7xl mx-auto px-1">
         {% block content %}
         <!-- Le contenu dynamique des pages enfants s’affichera ici -->
         {% endblock %}

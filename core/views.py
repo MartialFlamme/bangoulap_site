@@ -2,9 +2,11 @@ from django.shortcuts import render
 
 def accueil(request):
     images_slider = [
-        {'src': '..\static\images\danse_traditionnelle.jpg', 'alt': 'Danse traditionnelle'},
-        {'src': '..\static\images\chute_baba.jpg', 'alt': 'Chute Baba'},
-        {'src': '..\static\images\case_bangoulap.jpg', 'alt': 'case_Bangoulap'},
+        {'src': 'images/danse_traditionnelle.jpg', 'alt': 'Danse traditionnelle'},
+        {'src': 'images/chute_baba.jpg', 'alt': 'Chute Baba'},
+        {'src': 'images/case_bangoulap.jpg', 'alt': 'case_Bangoulap'},
+        {'src': 'images/patrimoine1.jpg', 'alt': 'traditionnelle'},
+        {'src': 'images/patrimoine2.jpg', 'alt': 'traditionnelle'},
     ]
 
     village = {
