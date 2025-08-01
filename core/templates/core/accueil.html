@@ -6,18 +6,18 @@
 <section class="bg-white"><br><br>
 
     <!-- Message de bienvenue -->
-    <div class="text-center py-12 px-4 sm:px-6 lg:px-8 reveal opacity-0 translate-y-6 transition-all duration-700">
+    <div class="text-center py-12 px-4 sm:px-6 lg:px-8 reveal opacity-0 translate-y-6 transition-all duration-700" data-effect="slide-down">
         <h1 id="taille" class="text-4xl font-bold text-green-800">
             Bienvenu chez sa majesté YONKEU KUIKA Jean, Roi de BANGOULAP.
         </h1><br>
         <div id="roi">
-            <img src="../../../static/images/chef2-bangoulap.jpeg" alt="Roi du village" class="mx-auto rounded-md shadow-md">
+            <img src="{% static 'images/chef2-bangoulap.jpeg' %}" alt="Roi du village" class="mx-auto rounded-md shadow-md">
             <p id="send" class="mt-4 text-gray-600 italic">{{ village.roi.message }}</p>
         </div>    
     </div>
 
     <!-- Slider d'images -->
-    <div class="relative w-full max-w-5xl mx-auto overflow-hidden rounded-lg shadow-lg reveal opacity-0 translate-y-6 transition-all duration-700">
+    <div class="relative w-full max-w-5xl mx-auto overflow-hidden rounded-lg shadow-lg reveal opacity-0 -translate-x-6 transition-all duration-700" data-effect="slide-left">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 {% for image in images_slider %} 
@@ -32,7 +32,7 @@
     </div>
 
     <!-- Informations sur le village -->
-    <div class="mt-12 max-w-7xl mx-auto px-6 reveal opacity-0 translate-y-6 transition-all duration-700">
+    <div class="mt-12 max-w-7xl mx-auto px-6 reveal opacity-0 scale-95 transition-all duration-700" data-effect="zoom">
         <div class="bg-yellow-50 border-l-4 border-green-700 p-6 rounded-lg shadow-md transition hover:shadow-lg">
             <h2 class="text-2xl font-semibold text-green-900 mb-4">À propos de BANGOULAP</h2>
             <ul class="space-y-2 text-gray-700">
@@ -62,22 +62,71 @@
     });
 </script>
 
-<!-- Animation scroll -->
+<!-- Animation scroll récurrente multi-effets -->
 <script>
+    const effectMap = {
+        "slide-down": {
+            hiddenClasses: ['opacity-0', 'translate-y-6'],
+            visibleClass: 'animate-visible-slide-down',
+        },
+        "slide-left": {
+            hiddenClasses: ['opacity-0', '-translate-x-6'],
+            visibleClass: 'animate-visible-slide-left',
+        },
+        "zoom": {
+            hiddenClasses: ['opacity-0', 'scale-95'],
+            visibleClass: 'animate-visible-zoom',
+        }
+    };
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
+            const effect = entry.target.dataset.effect || 'slide-down';
+            const { hiddenClasses, visibleClass } = effectMap[effect] || effectMap['slide-down'];
+
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-visible');
-                entry.target.classList.remove('opacity-0', 'translate-y-6');
+                entry.target.classList.add(visibleClass);
+                hiddenClasses.forEach(c => entry.target.classList.remove(c));
             } else {
-                entry.target.classList.remove('animate-visible');
-                entry.target.classList.add('opacity-0', 'translate-y-6');
+                entry.target.classList.remove(visibleClass);
+                hiddenClasses.forEach(c => entry.target.classList.add(c));
             }
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.reveal').forEach((el) => {
-        observer.observe(el);
-    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
+
+<style>
+/* Hidden states */
+.opacity-0 { opacity: 0; }
+.translate-y-6 { transform: translateY(1.5rem); }
+.-translate-x-6 { transform: translateX(-1.5rem); }
+.scale-95 { transform: scale(0.95); }
+.transition-all { transition-property: all; }
+.duration-700 { transition-duration: 700ms; }
+
+/* Visible animations */
+.animate-visible-slide-down {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition-timing-function: ease-out;
+    transition-property: all;
+    transition-duration: 700ms;
+}
+.animate-visible-slide-left {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    transition-timing-function: ease-out;
+    transition-property: all;
+    transition-duration: 700ms;
+}
+.animate-visible-zoom {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+    transition-timing-function: ease-out;
+    transition-property: all;
+    transition-duration: 700ms;
+}
+</style>
 {% endblock %}

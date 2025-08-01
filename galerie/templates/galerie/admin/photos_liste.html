@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Photos - Administration{% endblock %}
+
+{% block content %}
+<div class="max-w-5xl mx-auto py-8 px-4 fade-in">
+  <h1 class="text-2xl font-bold text-green-800 mb-6">🖼️ Liste des photos</h1>
+
+  <a href="{% url 'galerie:ajouter_photo' %}" class="bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded mb-4 inline-block">
+    ➕ Ajouter une photo
+  </a>
+
+  <!-- Responsive wrapper -->
+  <div class="overflow-x-auto">
+    <table class="min-w-[650px] w-full bg-white border rounded shadow overflow-hidden">
+      <thead class="bg-green-800 text-white text-sm">
+        <tr>
+          <th class="px-4 py-2 text-left">Titre</th>
+          <th class="px-4 py-2 text-left">Évènement</th>
+          <th class="px-4 py-2 text-left">Image</th>
+          <th class="px-4 py-2 text-left">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="text-sm">
+        {% for photo in photos %}
+        <tr class="border-b hover:bg-green-50">
+          <td class="px-4 py-2">{{ photo.titre }}</td>
+          <td class="px-4 py-2">{{ photo.evenement }}</td>
+          <td class="px-4 py-2">
+            <img src="{{ photo.image.url }}" alt="{{ photo.titre }}" class="h-12 w-auto rounded max-w-[80px]">
+          </td>
+          <td class="px-4 py-2">
+            <div class="flex flex-wrap gap-2">
+              <a href="{% url 'galerie:modifier_photo' photo.id %}" class="text-blue-600 hover:underline">✏️ Modifier</a>
+              <a href="{% url 'galerie:supprimer_photo' photo.id %}" class="text-red-600 hover:underline">🗑️ Supprimer</a>
+            </div>
+          </td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="4" class="text-center text-gray-500 py-4">Aucune photo enregistrée.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

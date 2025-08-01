@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}Se connecter | Administration{% endblock %}
+
+{% block content %}
+<div class="flex justify-center items-center min-h-[80vh] bg-gray-100 py-8 px-4">
+  <div class="bg-white rounded-lg shadow-md p-8 max-w-md w-full fade-in">
+    <div class="text-center mb-6">
+      <img src="{% static 'images/logo_village.jpg' %}" alt="Logo Bangoulap" class="w-20 h-20 mx-auto rounded-full border border-green-700">
+      <h2 class="text-2xl font-bold text-green-800 mt-4">Connexion Administrateur</h2>
+      <p class="text-gray-600 text-sm mt-1">Accédez à votre tableau de bord</p>
+    </div>
+
+    <form method="post" action="">
+      {% csrf_token %}
+
+      <!-- 📧 Identifiant -->
+      <div class="mb-4">
+        <label for="{{ form.username.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+          <i class="fas fa-user"></i> Nom d'utilisateur
+        </label>
+        {{ form.username|add_class:"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500" }}
+        {% if form.username.errors %}
+          <p class="text-red-500 text-sm mt-1">{{ form.username.errors.0 }}</p>
+        {% endif %}
+      </div>
+
+      <!-- 🔒 Mot de passe -->
+      <div class="mb-6">
+        <label for="{{ form.password.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+          <i class="fas fa-lock"></i> Mot de passe
+        </label>
+        {{ form.password|add_class:"w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500" }}
+        {% if form.password.errors %}
+          <p class="text-red-500 text-sm mt-1">{{ form.password.errors.0 }}</p>
+        {% endif %}
+      </div>
+
+      <!-- 🔘 Bouton -->
+      <div>
+        <button type="submit" class="w-full bg-green-700 text-white font-semibold py-2 rounded-md hover:bg-green-800 transition">
+          <i class="fas fa-sign-in-alt"></i> Se connecter
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Petite animation fade-in -->
+<style>
+  .fade-in {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+{% endblock %}

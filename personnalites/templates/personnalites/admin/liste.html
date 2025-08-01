@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Gestion des personnalités{% endblock %}
+
+{% block content %}
+<div class="max-w-5xl mx-auto px-4 py-8">
+  <h1 class="text-2xl font-bold text-green-800 mb-6">🧑‍🎓 Liste des personnalités</h1>
+
+  <div class="mb-4 text-right">
+    <a href="{% url 'personnalites:ajouter' %}" class="bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded shadow inline-block">
+      ➕ Ajouter une personnalité
+    </a>
+  </div>
+
+  <!-- Responsive Wrapper -->
+  <div class="overflow-x-auto">
+    <table class="min-w-[500px] w-full bg-white border rounded shadow-sm">
+      <thead class="bg-green-800 text-white text-sm">
+        <tr>
+          <th class="text-left px-4 py-2">Nom</th>
+          <th class="text-left px-4 py-2">Fonction</th>
+          <th class="text-left px-4 py-2">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in personnalites %}
+        <tr class="border-b hover:bg-green-50 text-sm">
+          <td class="px-4 py-2">{{ p.nom }}</td>
+          <td class="px-4 py-2">{{ p.fonction }}</td>
+          <td class="px-4 py-2">
+            <div class="flex flex-wrap gap-2">
+              <a href="{% url 'personnalites:modifier' p.id %}" class="text-blue-600 hover:underline">✏️ Modifier</a>
+              <a href="{% url 'personnalites:supprimer' p.id %}" class="text-red-600 hover:underline">🗑️ Supprimer</a>
+            </div>
+          </td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="3" class="text-center py-4 text-gray-600">Aucune personnalité enregistrée.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

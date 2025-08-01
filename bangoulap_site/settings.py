@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.forms',
     'core',
     'culture',
     'histoire',
@@ -51,7 +52,10 @@ INSTALLED_APPS = [
     'associations',
     'contact',
     'widget_tweaks',
+    'admin_custom',
+    'django.contrib.humanize',
 ]
+FORM_RENDERER = 'django.forms.renderers.TemplatesSetting'
 
 LANGUAGES = [
     ('fr', 'Français'),
@@ -150,6 +154,16 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']  # Pour tes fichiers en dev
 STATIC_ROOT = BASE_DIR / 'staticfiles'    # Pour la prod (collectstatic)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+LOGIN_URL = '/admin-custom/login/'
+LOGIN_REDIRECT_URL = '/admin-custom/dashboard/'
+LOGOUT_REDIRECT_URL = '/'
+CSRF_FAILURE_VIEW = 'admin_custom.views.custom_permission_denied_view'
+
+
+
+
+
 
 import os
 

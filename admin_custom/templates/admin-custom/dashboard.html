@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% load humanize %}
+
+{% block title %}Tableau de Bord Administrateur{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-4 py-8 space-y-10">
+
+  {% if request.GET.welcome %}
+    <div class="bg-green-100 border border-green-400 text-green-800 px-4 py-3 rounded scroll-reveal fade-in">
+      👋 Bienvenue sur le tableau de bord, {{ request.user.username }} !
+    </div>
+  {% endif %}
+  {% if request.GET.logged_out %}
+    <div class="bg-yellow-100 border border-yellow-400 text-yellow-800 px-4 py-3 rounded scroll-reveal fade-in">
+      ✅ Vous avez été déconnecté avec succès.
+    </div>
+  {% endif %}
+
+  <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 scroll-reveal slide-left">
+    <h1 class="text-3xl font-bold text-green-800 flex items-center gap-2">
+      <i class="fas fa-tachometer-alt"></i> Tableau de bord
+    </h1>
+    <form method="post" action="{% url 'admin_custom:logout' %}">
+      {% csrf_token %}
+      <button type="submit" class="flex items-center gap-2 text-white bg-emerald-700 hover:bg-emerald-800 font-semibold py-2 px-4 rounded-md shadow transition">
+        <i class="fas fa-sign-out-alt"></i> Déconnexion
+      </button>
+    </form>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal slide-right">
+    {% include "admin-custom/partials/card_stat.html" with icon="fa-newspaper" label="Actualités" value=total_actualites %}
+    {% include "admin-custom/partials/card_stat.html" with icon="fa-hand-holding-usd" label="Montant Reçu" value=total_montant %}
+    {% include "admin-custom/partials/card_stat.html" with icon="fa-donate" label="Nombre de Dons" value=total_dons %}
+    {% include "admin-custom/partials/card_stat.html" with icon="fa-image" label="Photos" value=total_photos %}
+    {% include "admin-custom/partials/card_stat.html" with icon="fa-video" label="Vidéos" value=total_videos %}
+    {% include "admin-custom/partials/card_stat.html" with icon="fa-user" label="Personnalités" value=total_personnalites %}
+  </div>
+
+  <div class="bg-white rounded shadow p-6 scroll-reveal slide-up">
+    <h2 class="text-xl font-semibold mb-4">📊 Dons des 6 derniers mois</h2>
+    <canvas id="donChart" height="100"></canvas>
+  </div>
+
+  <div class="bg-white rounded shadow p-6 scroll-reveal slide-left">
+    <h2 class="text-xl font-semibold mb-4">🧾 Derniers dons</h2>
+    <div class="overflow-x-auto">
+      <table class="min-w-full table-auto border">
+        <thead>
+          <tr class="bg-green-800 text-white text-sm">
+            <th class="px-4 py-2 text-left">Nom</th>
+            <th class="px-4 py-2 text-left">Montant</th>
+            <th class="px-4 py-2 text-left">Moyen</th>
+            <th class="px-4 py-2 text-left">Projet</th>
+            <th class="px-4 py-2 text-left">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for don in derniers_dons %}
+          <tr class="border-b hover:bg-green-50 text-sm">
+            <td class="px-4 py-2">{{ don.nom }}</td>
+            <td class="px-4 py-2">{{ don.montant|intcomma }} FCFA</td>
+            <td class="px-4 py-2">{{ don.get_moyen_display }}</td>
+            <td class="px-4 py-2">{{ don.projet.titre }}</td>
+            <td class="px-4 py-2">{{ don.created_at|date:"d/m/Y" }}</td>
+          </tr>
+          {% empty %}
+          <tr><td colspan="5" class="text-center text-gray-500 py-4">Aucun don enregistré.</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="bg-white rounded shadow p-6 scroll-reveal slide-right">
+    <h2 class="text-xl font-semibold mb-4">📰 Dernières actualités</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {% for actualite in dernieres_actualites %}
+      <div class="bg-gray-50 rounded p-4 shadow hover:shadow-md transition scroll-reveal fade-in">
+        <h3 class="font-bold text-green-800 text-lg mb-2">{{ actualite.titre }}</h3>
+        <p class="text-sm text-gray-700 mb-1">Par {{ actualite.auteur }} — {{ actualite.date|date:"d/m/Y" }}</p>
+        <p class="text-gray-600 text-sm">{{ actualite.contenu|truncatewords:20 }}</p>
+      </div>
+      {% empty %}
+      <p class="text-gray-500">Aucune actualité disponible.</p>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% if request.user.is_superuser %}
+  <div class="bg-white rounded shadow p-6 scroll-reveal slide-up">
+    <h2 class="text-xl font-semibold text-green-800 mb-4"><i class="fas fa-tools"></i> Gestion des contenus</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-green-50 p-4 rounded shadow hover:shadow-lg scroll-reveal fade-in">
+        <h3 class="text-lg font-bold text-green-700 mb-2">📰 Actualités</h3>
+        <a href="{% url 'actualites:admin_liste' %}" class="text-sm text-blue-700 hover:underline block">Gérer</a>
+      </div>
+      <div class="bg-green-50 p-4 rounded shadow hover:shadow-lg scroll-reveal fade-in">
+        <h3 class="text-lg font-bold text-green-700 mb-2">📁 Projets</h3>
+        <a href="{% url 'projets:admin_liste' %}" class="text-sm text-blue-700 hover:underline block">Gérer</a>
+      </div>
+      <div class="bg-green-50 p-4 rounded shadow hover:shadow-lg scroll-reveal fade-in">
+        <h3 class="text-lg font-bold text-green-700 mb-2">👤 Personnalités</h3>
+        <a href="{% url 'personnalites:admin_liste' %}" class="text-sm text-blue-700 hover:underline block">Gérer</a>
+      </div>
+      <div class="bg-green-50 p-4 rounded shadow hover:shadow-lg scroll-reveal fade-in">
+        <h3 class="text-lg font-bold text-green-700 mb-2">🖼️ Galerie</h3>
+          <a href="{% url 'galerie:admin_photos' %}">🖼️ Gérer les photos</a><br>
+          <a href="{% url 'galerie:admin_videos' %}">🎥 Gérer les vidéos</a>
+      </div>
+      <div class="bg-green-50 p-4 rounded shadow hover:shadow-lg scroll-reveal fade-in">
+        <h3 class="text-lg font-bold text-green-700 mb-2">👥 Utilisateurs</h3>
+        <a href="{% url 'admin_custom:user_list' %}" class="text-sm text-blue-700 hover:underline block">Lister</a>
+        <a href="{% url 'admin_custom:user_create' %}" class="text-sm text-green-700 hover:underline block">Ajouter</a>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const ctx = document.getElementById('donChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: {{ labels|safe }},
+        datasets: [{
+          label: 'Montant des dons (FCFA)',
+          data: {{ dons_par_mois|safe }},
+          backgroundColor: 'rgba(34, 197, 94, 0.6)',
+          borderColor: 'rgba(34, 197, 94, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: { beginAtZero: true }
+        }
+      }
+    });
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Accès refusé{% endblock %}
+
+{% block content %}
+<div class="text-center py-20">
+  <h1 class="text-4xl font-bold text-red-600 mb-4">⛔ 403 - Accès interdit</h1>
+  <p class="text-gray-700">Vous n’avez pas la permission d’accéder à cette page.</p>
+  <a href="{% url 'core:accueil' %}" class="mt-6 inline-block text-green-700 hover:underline">Retour à l’accueil</a>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Gestion des projets{% endblock %}
+{% block content %}
+<div class="max-w-5xl mx-auto py-8">
+  <h1 class="text-2xl font-bold text-green-800 mb-4">📁 Liste des projets</h1>
+  <a href="{% url 'projets:ajouter' %}" class="bg-green-700 text-white px-4 py-2 rounded mb-4 inline-block">➕ Ajouter</a>
+
+  <table class="min-w-full bg-white border rounded shadow">
+    <thead class="bg-green-800 text-white">
+      <tr>
+        <th class="text-left px-4 py-2">Titre</th>
+        <th class="text-left px-4 py-2">Date</th>
+        <th class="text-left px-4 py-2">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for p in projets %}
+      <tr class="border-b hover:bg-green-50">
+        <td class="px-4 py-2">{{ p.titre }}</td>
+        <td class="px-4 py-2">{{ p.date_lancement }}</td>
+        <td class="px-4 py-2 space-x-2">
+          <a href="{% url 'projets:modifier' p.id %}" class="text-blue-600 hover:underline">✏️Modifier</a>
+          <a href="{% url 'projets:supprimer' p.id %}" class="text-red-600 hover:underline">🗑️Supprimer</a>
+        </td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="3" class="text-center py-4">Aucun projet</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
