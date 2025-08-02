@@ -5,7 +5,7 @@
 
 {% block title %}Tableau de Bord Administrateur{% endblock %}
 
-{% block content %}
+{% block content %} <br>
 <div class="max-w-7xl mx-auto px-4 py-8 space-y-10">
 
   {% if request.GET.welcome %}
@@ -49,7 +49,7 @@
     <h2 class="text-xl font-semibold mb-4">🧾 Derniers dons</h2>
     <div class="overflow-x-auto">
       <table class="min-w-full table-auto border">
-        <thead>
+        <thead style="display: table; width: 100%; table-layout: fixed;">
           <tr class="bg-green-800 text-white text-sm">
             <th class="px-4 py-2 text-left">Nom</th>
             <th class="px-4 py-2 text-left">Montant</th>
@@ -58,9 +58,9 @@
             <th class="px-4 py-2 text-left">Date</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody style="display: block; max-height: 300px; overflow-y: auto;">
           {% for don in derniers_dons %}
-          <tr class="border-b hover:bg-green-50 text-sm">
+          <tr class="border-b hover:bg-green-50 text-sm" style="display: table; width: 100%; table-layout: fixed;">
             <td class="px-4 py-2">{{ don.nom }}</td>
             <td class="px-4 py-2">{{ don.montant|intcomma }} FCFA</td>
             <td class="px-4 py-2">{{ don.get_moyen_display }}</td>
@@ -68,7 +68,9 @@
             <td class="px-4 py-2">{{ don.created_at|date:"d/m/Y" }}</td>
           </tr>
           {% empty %}
-          <tr><td colspan="5" class="text-center text-gray-500 py-4">Aucun don enregistré.</td></tr>
+          <tr style="display: table; width: 100%; table-layout: fixed;">
+            <td colspan="5" class="text-center text-gray-500 py-4">Aucun don enregistré.</td>
+          </tr>
           {% endfor %}
         </tbody>
       </table>
@@ -78,7 +80,7 @@
   <div class="bg-white rounded shadow p-6 scroll-reveal slide-right">
     <h2 class="text-xl font-semibold mb-4">📰 Dernières actualités</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {% for actualite in dernieres_actualites %}
+      {% for actualite in dernieres_actualites|slice:":3" %}
       <div class="bg-gray-50 rounded p-4 shadow hover:shadow-md transition scroll-reveal fade-in">
         <h3 class="font-bold text-green-800 text-lg mb-2">{{ actualite.titre }}</h3>
         <p class="text-sm text-gray-700 mb-1">Par {{ actualite.auteur }} — {{ actualite.date|date:"d/m/Y" }}</p>

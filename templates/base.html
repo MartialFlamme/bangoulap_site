@@ -241,12 +241,11 @@
         </div>
       </div>
 
-        <!-- Autres -->
-       <a href="{% url 'contact:contact' %}" class="hover:text-yellow-300 transition">📬 Contact</a>
         <div class="relative group">
-            <a href="{% url 'dons:formulaire' %}" class="hover:text-yellow-300 transition">💸 Dons</a>
+            <a href="{% url 'dons:formulaire' %}" class="hover:text-yellow-300 transition">📩 Services</a>
             <div class="absolute hidden group-hover:block bg-green-800 mt-2 rounded shadow-md z-50">
-                <a href="{% url 'dons:formulaire' %}" class="block px-4 py-2 text-sm text-white hover:bg-green-700 transition">📝 Faire un don</a>
+              <a href="{% url 'contact:contact' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">📬 Contact</a>
+              <a href="{% url 'dons:formulaire' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">💸 Faire un don</a>
             </div>
         </div>
         <a href="{% url 'admin_custom:login' %}?next={% url 'admin_custom:dashboard' %}" class="...">
@@ -342,11 +341,11 @@
     </details>
 
     <!-- Divers -->
-    <a href="{% url 'contact:contact' %}" class="block hover:text-yellow-300">📬 Contact</a>
     <details class="bg-green-800 rounded">
-        <summary class="text-white px-4 py-2 cursor-pointer hover:text-yellow-300 transition">💸 Dons</summary>
+        <summary class="text-white px-4 py-2 cursor-pointer hover:text-yellow-300 transition">📩 Services</summary>
         <div class="ml-4 text-sm text-white py-2">
-            <a href="{% url 'dons:formulaire' %}" class="block px-2 py-1 hover:bg-green-700 rounded transition">📝 Faire un don</a>
+            <a href="{% url 'contact:contact' %}" class="block px-2 py-1 hover:bg-green-700 rounded">📬 Contact</a>
+            <a href="{% url 'dons:formulaire' %}" class="block px-2 py-1 hover:bg-green-700 rounded">💸 Faire un don</a>
         </div>
     </details>
     <a href="{% url 'admin_custom:login' %}?next={% url 'admin_custom:dashboard' %}" class="...">
@@ -421,6 +420,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   elements.forEach(el => observer.observe(el));
 });
+  document.addEventListener('DOMContentLoaded', () => {
+    let lastScrollTop = 0;
+    const header = document.getElementById('site-header');
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScroll > lastScrollTop && currentScroll > 80) {
+        // Scroll vers le bas → cacher le header
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        // Scroll vers le haut → afficher le header
+        header.style.transform = 'translateY(0)';
+      }
+
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Evite les valeurs négatives
+    });
+  });
 </script>
 
 
