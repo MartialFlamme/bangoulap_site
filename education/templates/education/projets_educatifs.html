@@ -1,16 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Projets éducatifs{% endblock %}
+{% block title %}Presentation du CODEBA{% endblock %}
 {% block content %}
-<div class="max-w-5xl mx-auto px-4"><br><br>
-    <h1 class="text-3xl font-bold text-emerald-800 mb-6">📚 Projets éducatifs</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {% for projet in projets %}
-        <div class="bg-white p-5 rounded shadow hover:shadow-lg transition">
-            <h2 class="text-xl font-semibold text-emerald-700">{{ projet.titre }}</h2>
-            <p class="mt-2 text-gray-700">{{ projet.description }}</p>
-        </div>
-        {% endfor %}
+<div class="max-w-4xl mx-auto px-4"><br><br>
+    <h1 class="text-3xl font-bold text-indigo-800 mb-6">📚 {{ contenu.nom }}</h1>
+    <img src="{% static 'images/presentation_du_CODEBA.PNG' %}" alt="{{ contenu.nom }}" class="w-full rounded-lg shadow mb-4">
+    <div class="bg-indigo-50 p-6 rounded text-gray-800 leading-relaxed text-justify">
+        {{ contenu.description }}
     </div>
 </div>
 {% endblock %}

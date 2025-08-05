@@ -1,19 +1,25 @@
 from django.shortcuts import render
 
 def projets_educatifs(request):
-    projets = [
-        {'titre': 'Ateliers numériques pour les jeunes', 'description': 'Initiation à l’informatique et à Internet dans les écoles.'},
-        {'titre': 'Éducation civique communautaire', 'description': 'Formations sur la citoyenneté et l’engagement local.'},
-    ]
-    return render(request, 'education/projets_educatifs.html', {'projets': projets})
+    contenu = {
+        'nom': 'Presentation du CODEBA',
+        'description': """
+            ASIEL est un produit de ALEN SARL qui est une entreprise dynamique évoluant globalement dans les domaines de la gestion, de la négociation et du commerce.
+            Soucieuse de s’adapter aux exigences du monde contemporain ; elle a initié un projet ambitieux qu’est ASIEL’. Ce service a pour vocation de mettre en lumière les commerces et surtout les trésors du Cameroun. A travers sa plateforme, l’entreprise entend valoriser les entreprises et commerces de notre environnement en mettant en évidence toute entreprise commerciale dont les valeurs ont été vérifiées. Ces valeurs devront cadrer avec une vision communautaire, une aspiration à se déployer valablement sur le marché national voire international ainsi qu’une responsabilité sociale effective.
+                    """,
+    }
+    return render(request, 'education/projets_educatifs.html', {'contenu': contenu})
 
 def academie_hoteliere(request):
     contenu = {
-        'nom': 'Académie Hôtelière de Bangoulap',
+        'nom': 'Activite de CODEBA',
         'description': """
-            Ce centre de formation vise à préparer les jeunes aux métiers de l’hôtellerie, de la restauration
-            et du tourisme rural, en valorisant les produits et coutumes locales.
-        """,
+            C’est ainsi que ASIEL sera pensé et conçu par nous pour offrir à notre environnement une expérience de e-market et de livraisons purement professionnels et flexibles. Il se déploie alors dans les différents services que sont :
+
+            ASIEL e-market ayant pour but de répondre aux divers besoins des consommateurs tout en faisant la promotion des producteurs et des entrepreneurs locaux. L’application permettra aux clients de procéder à leurs achats en toute sérénité avec la sélection et la constitution faciles de leurs paniers, l’enregistrement et le suivi en toute transparence de leurs commandes.
+            ASIEL delivery (Livraison standard) qui est indépendant du e-market et vous permet d’acheminer vos commandes et colis constitués sur le e-market ou pas, jusqu’à vous. Ici nous offrons un service de livraison standard (à partir de 4 heures après la commande)
+            SUPER ASIEL (Livraison Express) qui lui non plus n’est pas conditionné par l’achat sur l’application. Ce service vous donne droit à une livraison qui répond parfaitement à vos besoins urgents avec des délais beaucoup plus courts que ceux du service classique
+                    """,
         'image': 'images/education/academie.jpg'
     }
     return render(request, 'education/academie_hoteliere.html', {'contenu': contenu})
