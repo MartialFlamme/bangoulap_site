@@ -1,0 +1,3204 @@
+[
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "personnalites",
+        "model": "personnalite"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "projets",
+        "model": "projet"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "actualites",
+        "model": "actualite"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "galerie",
+        "model": "photo"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "galerie",
+        "model": "video"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "education",
+        "model": "academiehoteliere"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "education",
+        "model": "infrastructure"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "education",
+        "model": "projeteducatif"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "dons",
+        "model": "don"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "dons",
+        "model": "projet"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "associations",
+        "model": "association"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "contact",
+        "model": "messagecontact"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "contact",
+        "model": "contenupropose"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "admin_custom",
+        "model": "visiteur"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "CODEBA",
+        "model": "academiehoteliere"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "CODEBA",
+        "model": "projeteducatif"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "94va7altd2vquf3lv2ujr0xrfykpqs84",
+    "fields": {
+        "session_data": ".eJxVjDsOwyAQRO9CHSF-XqyU6XMGtCwQnEQgGbuycveA5CJpppj3Zg7mcN-y21tc3RLYlUl2-e080iuWAcITy6NyqmVbF8-Hwk_a-L2G-L6d7t9Bxpb7mkCgpSkJSFMAM6MxIJSxSQelo9ZSUZyN0ujlhBFSZz2tpZFgAvt8AdNQN6E:1uYVsZ:1OI6ir2GWHX0s3Qu1HYBY1vb24x7EcgXRtLwQphQQgw",
+        "expire_date": "2025-07-20T20:22:27.702Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ts2559c788upi5obbq63zf9wco9tnwyb",
+    "fields": {
+        "session_data": ".eJxVjDsOwyAQRO9CHSF-XqyU6XMGtCwQnEQgGbuycveA5CJpppj3Zg7mcN-y21tc3RLYlUl2-e080iuWAcITy6NyqmVbF8-Hwk_a-L2G-L6d7t9Bxpb7mkCgpSkJSFMAM6MxIJSxSQelo9ZSUZyN0ujlhBFSZz2tpZFgAvt8AdNQN6E:1uYhka:Opek0JyPnve-fmEh-cJ5u4BJFLYZaFb1TH90M64cdbo",
+        "expire_date": "2025-07-21T09:03:00.319Z"
+    }
+},
+{
+    "model": "personnalites.personnalite",
+    "pk": 1,
+    "fields": {
+        "nom": "Sa majeste YONKEU KUIKA Jean-Roi de Bangoulap",
+        "slug": "Roi_de_Bangoulap",
+        "photo": "personnalites/Roi_MTe8khJ.jpeg",
+        "fonction": "Chef supérieur du village Bangoulap, il est la plus haute autorité traditionnelle (chefferie de 3ᵉ degré). Il veille à la préservation des traditions,",
+        "biographie": "Sa Majesté YONKEU KUIKA Jean a été intronisé selon les rites traditionnels bamiléké. Depuis le début de son règne, il œuvre à la préservation des valeurs ancestrales tout en modernisant la vie communautaire. Il s’investit dans le développement du village, notamment à travers des projets éducatifs, culturels et sociaux. Roi rassembleur et accessible, il participe aux grandes fêtes culturelles et collabore étroitement avec la diaspora pour faire avancer Bangoulap. Son leadership repose sur la sagesse, le dialogue et la fidélité aux coutumes."
+    }
+},
+{
+    "model": "personnalites.personnalite",
+    "pk": 2,
+    "fields": {
+        "nom": "Marole Tchamba",
+        "slug": "Artiste",
+        "photo": "personnalites/Mayole.PNG",
+        "fonction": "Artiste complète : chanteuse, compositrice, productrice, actrice, coach vocale, styliste et ambassadrice culturelle camerounaise.",
+        "biographie": "Marole TCHAMBA, née le 19 septembre 1980 à Nkongsamba, Cameroun, est une icône culturelle camerounaise et africaine, originaire du département du NDÉ (région de l’Ouest). Benjamine d'une fratrie de cinq, orpheline de père dès sa naissance et de mère en 2010, elle débute sa carrière musicale en 1993 alors qu’elle est encore lycéenne. Elle devient la première voix féminine du Bend-Skin, un rythme traditionnel de l’Ouest Cameroun, et s’impose comme \"La Reine\", \"La Diva\", puis \"La Légende du Bend-Skin\". Auteure-compositrice-interprète, arrangeuse, productrice, coach vocale, chorégraphe, styliste, actrice de cinéma, promotrice culturelle, présidente d’association et femme de lettres, elle est une artiste pluridisciplinaire. Elle a vécu 7 ans et demi aux États-Unis (Californie), et a porté la musique camerounaise sur les scènes d’Afrique, d’Europe, d’Asie et d’Amérique. Marole TCHAMBA compte plus de 10 albums, une cinquantaine de clips vidéo, et plus de 30 ans de carrière. Elle est aussi la fondatrice de “La Maison des Orphelins”, une association à but humanitaire. Distinguée dans le monde entier, elle a reçu de nombreux prix, dont Citoyenne d’honneur de Mbouda (1996), Ambassadrice de la chanson camerounaise (MINAC 2009), nominée aux AFRIMMA, BALOFON MUSIC AWARDS, CANAL 2’OR, et plusieurs Oscars d’excellence au Cameroun, à Paris, Dubaï, Bruxelles et Washington. Elle a également joué dans le film \"La Déchirure 2\" (2006), formé 9 générations de danseurs, et reste une figure incontournable de la musique patrimoniale camerounaise.\r\nContact : 📧 maroletchamba@gmail.com | 📞 (+237) 699 93 28 46 / 670 36 09 78."
+    }
+},
+{
+    "model": "personnalites.personnalite",
+    "pk": 3,
+    "fields": {
+        "nom": "Ministre TCHATAT  Clobert",
+        "slug": "Ministre",
+        "photo": "personnalites/tchatat_clobert.jpg",
+        "fonction": "Homme politique camerounais, ancien Ministre de l’Urbanisme et de l’Habitat. Il a œuvré dans le domaine du développement urbain, de l’habitat social,",
+        "biographie": "Clobert Tchatat est un homme politique camerounais. Il est ministre de l'Agriculture et du Développement rural de 2004 à 2006 puis ministre de Développement urbain et de l'habitat de 2006 à 2011.Clobert Tchatat est originaire de Bangoulap dans le département du Ndé dans la région de l'Ouest. Il grandit à Baré puis à Nkongsamba où il fait ses études secondaires au Lycée de Manengoumba. Il est un ingénieur agronome de formation.Clobert Tchatat occupe tour à tour les fonctions de chef de la division des études et projets agricoles au ministère de l'Agriculture, conseiller technique au Premier ministère, puis chef de la division des affaires agricoles jusqu'en 2004. Le 8 décembre 2004, il est nommé ministre de l'Agriculture par décret présidentiel.\r\n\r\nLe 30 juin 2009, il est nommé ministre du Développement urbain et de l'habitat au sein du gouvernement du premier gouvernement Philémon Yang.\r\n\r\nClobert Tchatat est militant du Rassemblement Démocratique du Peuple Camerounais (RDPC). Il est le chef de la délégation permanente départementale du comité central pour le Ndé. Il a assuré la fonction de président de la Commission départementale de supervision des élections dans le Ndé lors des élections législatives et municipales de 2020."
+    }
+},
+{
+    "model": "personnalites.personnalite",
+    "pk": 5,
+    "fields": {
+        "nom": "TCHANA Pierre",
+        "slug": "artiste",
+        "photo": "personnalites/pierre_tchana.PNG",
+        "fonction": "auteur, compositeur, interprète, musicien camerounais spécialiste du Mangambeu",
+        "biographie": "Né le 2 février 1945 à Bangoulap, il passe son enfance à Nkongsamba.\r\nÉlève, Tchana chante à l’église.\r\n    • Carrière\r\nEn 1957, il remporte avec sa flûte le premier prix d’une émission publique organisée par Radio Douala .\r\nEn 1959, il s'installe à Yaoundé, où il poursuit ses études tout en faisant de la musique. En 1961, Radio Yaoundé l'enregistre dans le cadre d’un programme de découverte des jeunes talents.\r\nDe 1963 à 1965, il chante à l’ancien Pezzena Bar du quartier Madagascar. En 1965, il crée l'orchestre Travel Jazz. En 1968, il enregistre le disque Il n’est jamais trop tard chez Philips. En 1970, il est en contrat avec les éditions SATEL et en devient le représentant en Afrique centrale.\r\nIl meurt le 24 novembre 1998 à Douala.\r\n     ✍🏽 Mr Carrasco né le 2 février 1945 et mort le 18 novembre 1998 (à 53 ans) est un auteur, compositeur, interprète, musicien camerounais spécialiste du mangambeu. Il a connu ses années de gloire dans les années 1970, 1980 et 1990 au Cameroun."
+    }
+},
+{
+    "model": "projets.projet",
+    "pk": 1,
+    "fields": {
+        "titre": "Commission Eaux et Energie",
+        "description": "Pour un accès durable à l’eau potable et à l’énergie à Bangoulap\r\nLa Commission Eau et Énergie du CODEBA (Comité de Développement de Bangoulap) joue un rôle stratégique dans l’amélioration des conditions de vie des populations du village Bangoulap, situé dans la région de l’Ouest du Cameroun. Elle a pour mission de concevoir, planifier, coordonner et suivre les projets liés à l’approvisionnement en eau potable et à l’électrification rurale, deux piliers essentiels du développement durable.\r\n\r\n1- Accès à l’eau potable : un enjeu vital Consciente des défis liés à l’accès à une eau saine, la Commission a lancé plusieurs initiatives :\r\n\r\n✅ Identification et réhabilitation des sources d’eau : Des travaux ont été entrepris pour capter, protéger et aménager plusieurs sources naturelles dans les différents quartiers de Bangoulap.\r\n\r\n✅ Construction de forages et puits modernes : En collaboration avec des partenaires techniques et des ONG, des forages équipés de pompes manuelles ou solaires ont été installés dans des zones à forte densité de population.\r\n\r\n✅ Mise en place de systèmes de stockage et de distribution : Des châteaux d’eau ont été construits et reliés à un réseau de distribution local pour desservir les ménages et institutions publiques (écoles, centres de santé, marchés).\r\n\r\n✅ Sensibilisation à l’hygiène et à la gestion communautaire de l’eau : La commission organise des sessions de formation pour encourager les bonnes pratiques et renforcer la gestion participative des points d’eau.\r\n\r\n2- Développement de l’énergie pour tous L’électrification constitue un levier fondamental pour l’amélioration de la qualité de vie et le développement économique local.\r\n\r\n✅ Extension du réseau électrique : Grâce aux efforts conjoints avec ENEO et les autorités locales, le réseau électrique a été étendu à plusieurs quartiers auparavant non desservis.\r\n\r\n✅ Promotion des énergies renouvelables : Pour répondre à la forte demande énergétique et à la faible stabilité du réseau classique, la Commission soutient l’installation de kits solaires pour l’éclairage domestique, les centres de santé et les salles de classe.\r\n\r\n✅ Appui à l’entreprenariat énergétique : Des initiatives locales sont encouragées, comme la création de micro-entreprises de recharge solaire ou de maintenance de batteries, créant ainsi des opportunités d’emploi pour les jeunes.\r\n\r\n3- Suivi, évaluation et partenariat La Commission Eau et Énergie fonctionne sur la base d’un plan d’action pluriannuel, en lien avec le Plan Global de Développement (PGD) de Bangoulap. Elle établit des partenariats techniques, financiers et institutionnels, avec :\r\n\r\nLes ministères sectoriels compétents (MINEE, MINSANTE)\r\n\r\nLes ONG locales et internationales\r\n\r\nLes élites intérieures et de la diaspora\r\n\r\nLes bailleurs de fonds\r\n\r\n🌍 Pour un avenir plus sain et plus éclairé à Bangoulap Par ses actions, la Commission Eau et Énergie du CODEBA contribue directement à l’amélioration des conditions sanitaires, à l’autonomisation économique des populations, et à la réduction de la pauvreté énergétique. Elle incarne une vision inclusive et durable du développement, centrée sur l’intérêt communautaire et la participation citoyenne.",
+        "date_lancement": null,
+        "image": "projets/images/eau_et_energie.JPG"
+    }
+},
+{
+    "model": "projets.projet",
+    "pk": 2,
+    "fields": {
+        "titre": "Commission Santé",
+        "description": "La Commission Santé du CODEBA (Comité de Développement de Bangoulap) œuvre activement pour renforcer l'accès aux soins dans le village, en lien avec le Plan Global de Développement (PGD).\r\n\r\n🏥 Infrastructures médicales\r\nElle soutient le centre de santé local en fournissant du matériel essentiel (lits, tables d'accouchement, trousses d’urgence) et favorise la création de petits centres de soins dans les quartiers éloignés. Des partenariats avec des hôpitaux mieux équipés sont aussi encouragés.\r\n\r\n💉 Campagnes de prévention\r\nDes actions régulières sont menées : vaccinations, dépistages du diabète, de l’hypertension et du paludisme, ainsi que des sensibilisations à l’hygiène, à la santé des jeunes filles et à la prévention des maladies.\r\n\r\n👩‍⚕️ Appui au personnel soignant\r\nLa commission forme les agents de santé communautaire et améliore leurs conditions de travail (logement, primes, matériel), pour renforcer leur motivation et efficacité.\r\n\r\n🤝 Partenariats et solidarité\r\nElle collabore avec le ministère de la Santé, des ONG comme l’OMS ou l’UNICEF, et mobilise la diaspora pour organiser des journées de santé communautaire, des campagnes médicales et des collectes de fonds.",
+        "date_lancement": "2025-07-14",
+        "image": "projets/images/sante_Bangoulap.jpg"
+    }
+},
+{
+    "model": "projets.projet",
+    "pk": 3,
+    "fields": {
+        "titre": "La Commission Agro-pastorale",
+        "description": "Soutenir l’agriculture et l’élevage pour nourrir Bangoulap et développer son économie locale\r\n\r\nLa Commission Agro-pastorale du CODEBA joue un rôle central dans le développement économique de Bangoulap. Elle accompagne les agriculteurs et éleveurs du village pour améliorer la productivité, moderniser les pratiques, valoriser les produits locaux et garantir une meilleure sécurité alimentaire.\r\n\r\nSes missions principales :\r\n\r\nAppui aux producteurs locaux en fournissant des semences améliorées, du petit matériel agricole et des formations sur les bonnes pratiques.\r\nSoutien à l’élevage (volaille, petits ruminants, porcins…) avec des actions de vaccination, de suivi vétérinaire et de construction d’abris.\r\nSensibilisation à l’agriculture durable : rotation des cultures, compostage, protection des sols, gestion de l’eau.\r\nMise en place de coopératives et d’initiatives communautaires pour faciliter la commercialisation des produits agricoles et l’accès aux crédits.\r\nOrganisation de foires agro-pastorales pour promouvoir les produits du terroir, partager les savoir-faire et encourager l’entrepreneuriat rural.\r\nRecherche de partenariats avec des ONG, des institutions agricoles et des membres de la diaspora pour obtenir des financements ou du soutien technique.\r\nL’agriculture et l’élevage sont au cœur de l’autonomie et de la prospérité de Bangoulap. Grâce à cette commission, les producteurs locaux sont mieux accompagnés et mieux valorisés.",
+        "date_lancement": "2025-07-14",
+        "image": "projets/images/agoagri.PNG"
+    }
+},
+{
+    "model": "projets.projet",
+    "pk": 4,
+    "fields": {
+        "titre": "La commission des Vœux et de la Fête de la Jeunesse",
+        "description": "La Commission des Vœux et de la Fête de la Jeunesse\r\n\r\n\r\nCélébrer la jeunesse et renforcer les liens communautaires\r\n\r\n\r\nCette commission a pour mission de coordonner les vœux officiels du village en début d’année, tout en préparant activement la fête de la jeunesse à Bangoulap. Elle joue un rôle social fort, en valorisant la jeunesse, en promouvant les talents et en créant des moments de cohésion.\r\n\r\n \r\n\r\nSes principales activités sont :\r\n\r\nSes principales activités sont :\r\nPréparation de la fête de la jeunesse (11 février) : défilé, prestations artistiques, concours, animations sportives et culturelles.\r\nMobilisation des jeunes autour des valeurs de paix, de responsabilité et d’engagement citoyen\r\nMise en avant des talents locaux (musique, danse, arts, initiatives solidaires).\r\nCollaboration avec les établissements scolaires et les associations de jeunes.\r\n\r\nLa Commission de l’Excellence Bangoulap\r\n\r\nEncourager le mérite et soutenir les élites de demain\r\n\r\n \r\n\r\nLa Commission de l’Excellence est chargée de détecter, récompenser et soutenir les jeunes élèves, étudiants et porteurs de projets qui se distinguent par leurs résultats scolaires, leur discipline ou leurs initiatives positives.\r\n\r\nSes actions principales :\r\n\r\nOrganisation annuelle de la Cérémonie de l’Excellence (remise de prix, diplômes, dons de matériel).\r\nSuivi des élèves méritants, même après leur départ du village (bourses, orientation, mentorat).\r\nMise en place de concours éducatifs ou de projets citoyens pour stimuler l’ambition.\r\nValorisation des réussites locales pour inspirer la jeune génération.\r\nAppui aux familles en difficulté ayant des enfants brillants.\r\n \r\n\r\nCes deux commissions œuvrent ensemble pour bâtir une jeunesse responsable, fière de ses racines et tournée vers l’avenir.",
+        "date_lancement": null,
+        "image": "projets/images/fete_jeunesse.jpg"
+    }
+},
+{
+    "model": "projets.projet",
+    "pk": 5,
+    "fields": {
+        "titre": "La Commission Forum de la jeunesse",
+        "description": "Donner la parole à la jeunesse et construire l’avenir ensemble\r\n\r\nLa Commission Forum de la Jeunesse du CODEBA a pour mission d’organiser un espace d’échange, d’expression et de réflexion pour les jeunes de Bangoulap, qu’ils vivent au village ou dans la diaspora. Elle cherche à renforcer leur engagement, valoriser leurs idées et créer des passerelles entre générations.\r\n\r\nSes principales actions sont :\r\n\r\nOrganisation annuelle du Forum de la Jeunesse de Bangoulap, moment fort d’échange entre jeunes, autorités traditionnelles et experts autour des enjeux de développement.\r\nAteliers et tables rondes sur des thématiques clés : emploi, entrepreneuriat, engagement citoyen, éducation, culture, environnement.\r\nValorisation des initiatives des jeunes : projets communautaires, entreprises locales, actions solidaires ou culturelles.\r\nRenforcement des capacités : formations pratiques, coaching, mentorat avec des professionnels et membres de la diaspora.\r\nCréation d’un réseau de jeunes leaders de Bangoulap, actifs dans les quartiers, les villes et à l’international.\r\nCollaboration avec les associations de jeunesse, les écoles, les ONG et institutions pour maximiser l’impact.\r\nLe Forum de la Jeunesse est un levier stratégique pour écouter, accompagner et impliquer la jeunesse de Bangoulap dans le développement de leur communauté.",
+        "date_lancement": null,
+        "image": "projets/images/jeune1.JPG"
+    }
+},
+{
+    "model": "projets.projet",
+    "pk": 6,
+    "fields": {
+        "titre": "La Commission Développement du Tourisme",
+        "description": "Promouvoir Bangoulap comme une destination culturelle, naturelle et historique\r\n\r\nLa Commission Développement du Tourisme du CODEBA travaille à faire de Bangoulap une destination attrayante pour les visiteurs nationaux et internationaux. Elle valorise le patrimoine, les traditions et les paysages du village, tout en créant des opportunités économiques pour les habitants.\r\n\r\nSes missions principales :\r\n\r\nIdentification, préservation et valorisation des sites touristiques de Bangoulap : lieux historiques, sites naturels, œuvres d’art traditionnel, cases patrimoniales, etc.\r\nÉlaboration d’un plan de développement touristique durable, en cohérence avec les réalités locales.\r\nOrganisation de visites guidées, circuits touristiques, festivals culturels et autres événements pour faire découvrir la richesse de Bangoulap.\r\nMise en place d’une signalisation touristique, de supports de communication (guides, affiches, cartes) et de plateformes numériques (site web, réseaux sociaux).\r\nFormation des jeunes et des guides locaux à l’accueil touristique, la gestion des visiteurs et la médiation culturelle.\r\nDéveloppement d’infrastructures d’accueil : hébergements, restauration, aires de repos, espaces d’exposition.\r\nPartenariat avec les autorités locales, les ministères du tourisme, les ONG culturelles et la diaspora pour le financement et la promotion.\r\nLe tourisme est un moteur de développement local, créateur d’emplois et de fierté culturelle. Grâce à cette commission, Bangoulap s’ouvre au monde tout en protégeant son identité.",
+        "date_lancement": null,
+        "image": "projets/images/tour1.JPG"
+    }
+},
+{
+    "model": "projets.projet",
+    "pk": 7,
+    "fields": {
+        "titre": "La Commission du Patrimoine, du Domaine Foncier et de la Sécurité",
+        "description": "Préserver l’héritage de Bangoulap, protéger ses terres et assurer la tranquillité du village\r\n\r\nCette commission joue un rôle fondamental dans la préservation des ressources matérielles et immatérielles de Bangoulap. Elle agit pour la sécurisation du domaine foncier, la valorisation du patrimoine culturel, ainsi que la prévention des conflits et des risques.\r\n\r\nSes principales missions sont :\r\n\r\nProtection et gestion du patrimoine culturel et historique du village : cases traditionnelles, objets anciens, lieux de mémoire, savoirs ancestraux.\r\nSécurisation foncière : identification et enregistrement des terres communautaires et familiales, sensibilisation à la législation foncière, résolution des litiges liés aux terrains.\r\nPrévention des conflits et médiation locale, en lien avec les chefs de quartiers et les autorités coutumières.\r\nCollaboration avec les services de sécurité, les forces de maintien de l’ordre et les comités de vigilance pour garantir la paix dans le village.\r\nOrganisation de campagnes de sensibilisation sur la sécurité communautaire, la protection des biens, et les comportements responsables.\r\nLutte contre les occupations anarchiques, les ventes illégales de terres et les actes de vandalisme sur les biens collectifs.\r\nSuivi des travaux de clôture, bornage et entretien des terrains appartenant à la chefferie ou à la communauté.\r\nCette commission agit à la croisée du passé, du présent et de l’avenir, en veillant à ce que Bangoulap reste un espace respecté, organisé, et sécuritaire pour tous ses habitants.",
+        "date_lancement": null,
+        "image": "projets/images/patri1.JPG"
+    }
+},
+{
+    "model": "projets.projet",
+    "pk": 8,
+    "fields": {
+        "titre": "La Commission des Infrastructures",
+        "description": "Construire aujourd’hui les équipements durables pour le Bangoulap de demain\r\n\r\n \r\n\r\nLa Commission des Infrastructures du CODEBA est chargée de planifier, coordonner et suivre la réalisation des projets de construction et de réhabilitation au sein du village. Elle veille à doter Bangoulap d’équipements modernes, utiles et adaptés aux besoins de la population.\r\n\r\nSes principales missions :\r\n\r\nÉlaboration d’un plan directeur des infrastructures prioritaires : routes, ponts, écoles, centres de santé, bâtiments communautaires, lieux culturels, etc.\r\nSuivi technique et administratif des projets de construction entrepris dans le cadre du Plan Global de Développement (PGD).\r\nRéhabilitation des infrastructures existantes : rénovation des salles communautaires, amélioration des points d’eau, entretien des axes routiers internes.\r\nIdentification des besoins réels en infrastructures dans chaque quartier et dialogue permanent avec les populations locales.\r\nRecherche de financements, rédaction de dossiers techniques et sollicitation de partenaires (collectivités, ONG, bailleurs de fonds, diaspora).\r\nSupervision des chantiers pour garantir le respect des normes, des délais, et la qualité des ouvrages.\r\nMise en œuvre de projets d’électrification, d’éclairage public, de voirie rurale et de télécommunications.\r\n \r\n\r\nÀ travers cette commission, le CODEBA donne un visage concret au développement, en transformant les aspirations communautaires en réalisations tangibles.",
+        "date_lancement": null,
+        "image": "projets/images/infra1.JPG"
+    }
+},
+{
+    "model": "projets.projet",
+    "pk": 9,
+    "fields": {
+        "titre": "La Commission Développement d’initiatives entrepreneuriales",
+        "description": "Stimuler la créativité économique locale et soutenir les porteurs de projets\r\n\r\n \r\n\r\nLa Commission Développement d’initiatives entrepreneuriales du CODEBA œuvre à faire émerger une nouvelle génération d’acteurs économiques à Bangoulap. Elle accompagne les jeunes, les femmes et les porteurs de projets dans la création d’activités génératrices de revenus durables et innovantes.\r\n\r\n \r\n\r\nSes missions principales :\r\n\r\n \r\n\r\nIdentification et accompagnement des entrepreneurs locaux : artisans, agriculteurs, commerçants, prestataires de services, etc.\r\nOrganisation de formations pratiques en gestion, marketing, comptabilité, accès au financement, et formalisation d’entreprise.\r\nCréation d’un incubateur local ou d’un espace collaboratif pour l’accompagnement des projets entrepreneuriaux.\r\nFacilitation de l’accès aux microcrédits, aux financements participatifs ou aux partenariats avec la diaspora.\r\nPromotion des produits “Made in Bangoulap”, en mettant en avant le savoir-faire local et en soutenant les chaînes de valeur.\r\nAppui à la structuration des coopératives, des GICs et des associations économiques.\r\nOrganisation de foires économiques, salons de l’innovation, journées de l’entrepreneuriat pour valoriser les initiatives locales.\r\nCollaboration avec les institutions publiques, les ONG de développement et les acteurs économiques pour créer un environnement favorable à l’investissement.\r\n \r\n\r\nCette commission incarne la volonté de Bangoulap de bâtir une économie locale dynamique, inclusive et tournée vers l’avenir, en valorisant les talents et les ressources du territoire.",
+        "date_lancement": null,
+        "image": "projets/images/dev.JPG"
+    }
+},
+{
+    "model": "actualites.actualite",
+    "pk": 1,
+    "fields": {
+        "titre": "Désignation du nouveau Roi",
+        "auteur": "Sa Majesté Yonkeu Kuika Jean, roi des Bangoulap",
+        "slug": "designation-du-nouveau-roi",
+        "image": "actualites/designationroi.jpg",
+        "contenu": "Sa Majesté Yonkeu Kuika Jean, roi des Bangoulap va présider, le 22 avril 2023, la cérémonie d’installation officielle du chef de cette communauté dans la région du Centre.\r\nPorté à la tête de la communauté Bangoulap du centre lors des élections couplées du 31 juillet 2022, Dja Mbeu Megni Diekeu Joseph, chef de la communauté Bangoulap du centre, sera officiellement installé dans ses fonctions le 22 avril 2023. En effet, selon le président du comité d’organisation de cet événement, Dja Tafeu Tatnke II, il s’agira d’un double événement. La première activité sera ponctuée par la tournée de sa Majesté Yonkeu Kuika Jean, roi des Bangoulap et la seconde activité sera marquée par la cérémonie d’installation proprement dite. S’agissant de la tournée de sa Majesté, il va s’agir de faire des visites aux membres de la communauté Bangoulap dans le Centre. A cet effet, le roi de Bangoulap se rendra entre autres, à Obala, mbalmayo, au quartier MballaII et biem assi à Yaoundé. Pour chaque visite, le point de rencontre se fera au sein d’un « Mandjo » précis. Pour ce qui est de la cérémonie officielle du 22 avril 2023, le président du comité d’organisation, précise qu’elle sera ponctuée d’une série de manifestations qui se dérouleront à l’esplanade de l’hôtel de ville de Yaoundé.",
+        "date": "2023-04-22",
+        "publie": true
+    }
+},
+{
+    "model": "actualites.actualite",
+    "pk": 2,
+    "fields": {
+        "titre": "Les dances traditionnelles",
+        "auteur": "Sa Majesté Yonkeu Kuika Jean, roi des Bangoulap",
+        "slug": "les-dances-traditionnelles",
+        "image": "actualites/Danse-Bamileke.jpg",
+        "contenu": "Après le projet de construction de la Cité Internationale de la Musique et de la Danse(CIMUDA), le village Bangoulap poursuit son chemin de vulgarisation. C’est au tour de Douala d’accueillir la semaine culturelle baptisée « Bangoulap Week » du 12 au 19 janvier prochain. L’événement sera conduit par sa Majesté le Roi de Bangoulap, Jean Yonkeu.Placé sous le haut patronage du ministre des Arts et de la Culture, le projet « Bangoulap Week » a pour objectif de présenter des atouts de Bangoulap. Et, l’initiative vise aussi à positionner le groupement Bangoulap aux yeux du monde entier. En outre, ce rendez-vous sera une occasion de montrer quelques patrimoines matériels et immatériels. En effet, plusieurs articulations seront au menu de ce rendez-vous culturel. Il va s’agir de la randonnée touristique, découverte des lieux et monuments historiques à Douala. A côté de cela, s’ajoutera la présentation de vernissages et expositions, la conférence débat et bien d’autres.",
+        "date": "2019-01-08",
+        "publie": true
+    }
+},
+{
+    "model": "actualites.actualite",
+    "pk": 3,
+    "fields": {
+        "titre": "Cameroun – Musique et danse : Bangoulap aura sa cité culturelle !",
+        "auteur": "Sa Majesté Yonkeu Kuika Jean, roi des Bangoulap",
+        "slug": "cameroun-musique-et-danse-bangoulap-aura-sa-cite-c",
+        "image": "actualites/Bangoulap.jpg",
+        "contenu": "Des fonds y ont été levés à cet effet, le 1er mars 2018 à Yaoundé.\r\n\r\nSelon des sources non officielles, la cagnotte a atteint la rondelette somme d’environ 30 millions de francs CFA. Inscrit dans le cadre de la préservation et la valorisation du patrimoine culturel immatériel du Cameroun, le projet de construction de la Cité Internationale de la Musique et de la Danse (Cimuda,) lancé en 2012 par la Route des Chefferies, se précise. « Le peu d’argent que nous avons récolté, nous permettra de commencer dans les prochains jours », a précisé le président de Bangoulap Tour, Jean Wandji Nkumi. Il ajoute par ailleurs qu’on « nous a offert ce soir le terrassement ».\r\n\r\nCimuda va se construire sur une superficie de dix hectares avec plusieurs compartiments en l’occurrence un musée, une salle de concert, un espace multimédia, un jardin sonore, une scène et bien d’autres. L’objectif est d’inventorier, sauvegarder et présenter les musiques, les danses et les instruments de musique du terroir. En effet, cette initiative découle de la volonté des rois de la région de l’Ouest. Pour sa majesté le roi de Bangoulap, « Cette cité va permettre de réunir tous que nous avons comme patrimoine matériel et immatériel non seulement de l’ouest, mais de toutes les aires culturelles du Cameroun »\r\n\r\nSitué dans le département du Ndé chef-lieu Bangangté, le village Bangoulap est une terre de tradition artistique. La localité regorge plus de 25 danses traditionnelles. Cela se traduit par une fourchette des artistes natifs. Entre autre, le feu Pierre Tchana, Gerrard Bens, Marol Tchamba et bien d’autres. Tout ceci montre à suffisance le choix de la construction de la cité internationale de la musique et de la danse. « Il est évident qu’on ait choisi  cette terre de Bangoulap et qu’on veut valoriser ce que nous avons. Nous voulons montrer au monde entier que Bangoulap regorge nombreuses richesses culturelle(…Ndlr) et qu’on veut transmettre aux prochaines générations » indique le président de Bangoulap Tour.\r\n\r\nLe futur édifice dédié à la musique et la danse est au four et moulin de plusieurs enjeux notamment culturels, touristiques, patrimoniaux et économiques. Pour le Roi de cette localité, « C’est un projet qui va booster le développement socio-économique de notre village ». Même son de cloche pour l’une des stars camerounaises du Makossa, Charlie Néllé qui pense que « nous avons besoin de vendre à l’extérieur. Avec ça (la cité … Ndlr) je pense que, on va revivre avec une bonne image du Cameroun ».\r\n\r\nQuant aux mécènes, c’est avec plaisir qu’ils se portent garant d’accompagner le projet. Marie Angele Babong, chargée de la communication à la fondation les perles de Frévice déclare que « la fondation les perles de Frévice est une association humanitaire à but non lucratif. Et partout ou nous pouvons aider le Cameroun à Sortir de la précarité nous n’hésitons pas. C’est dans cet élan de vouloir développé à notre manière que nous suivons le peuple Bangoulap. »",
+        "date": "2018-03-01",
+        "publie": true
+    }
+},
+{
+    "model": "galerie.photo",
+    "pk": 1,
+    "fields": {
+        "titre": "Danse Traditionnelle",
+        "image": "galerie/photos/photo.jpg",
+        "evenement": "patrimoine vivant, un langage culturel transmis de génération en génération",
+        "date": "2025-07-10"
+    }
+},
+{
+    "model": "galerie.photo",
+    "pk": 2,
+    "fields": {
+        "titre": "Sa Majeste YONKEU KUIKA",
+        "image": "galerie/photos/chef2-bangoulap.jpeg",
+        "evenement": "",
+        "date": "2025-07-10"
+    }
+},
+{
+    "model": "galerie.photo",
+    "pk": 3,
+    "fields": {
+        "titre": "désignation du Roi",
+        "image": "galerie/photos/designationroi.jpg",
+        "evenement": "installation Roi de Bangoulap",
+        "date": "2025-07-14"
+    }
+},
+{
+    "model": "galerie.photo",
+    "pk": 4,
+    "fields": {
+        "titre": "Fête traditionnelle du peuple bangoulap",
+        "image": "galerie/photos/fete_traditionnelle_peuple.PNG",
+        "evenement": "Le Festival Culturel Medumba est un événement majeur qui se tient tous les deux ans, généralement au mois de juillet, dans la région de l’Ouest Cameroun. Il est organisé par les élites des 14 villages",
+        "date": "2025-07-14"
+    }
+},
+{
+    "model": "galerie.photo",
+    "pk": 5,
+    "fields": {
+        "titre": "Marole TCHAMBA",
+        "image": "galerie/photos/mayole1.jpg",
+        "evenement": "",
+        "date": "2025-07-23"
+    }
+},
+{
+    "model": "galerie.photo",
+    "pk": 6,
+    "fields": {
+        "titre": "Présentation du CODEBA",
+        "image": "galerie/photos/organigramme-codeba.png",
+        "evenement": "",
+        "date": "2025-08-02"
+    }
+},
+{
+    "model": "galerie.photo",
+    "pk": 7,
+    "fields": {
+        "titre": "Ministre TCHATAT Clobert",
+        "image": "galerie/photos/tchatat_clobert.jpg",
+        "evenement": "",
+        "date": "2025-08-03"
+    }
+},
+{
+    "model": "galerie.video",
+    "pk": 1,
+    "fields": {
+        "titre": "Message de sa Majeste YONKEU KUIKA",
+        "youtube_id": "X8aTm4r4jUo",
+        "date": "2025-07-10"
+    }
+},
+{
+    "model": "galerie.video",
+    "pk": 3,
+    "fields": {
+        "titre": "La dance Kesou",
+        "youtube_id": "c78xPJ9tSxQ",
+        "date": "2025-07-10"
+    }
+},
+{
+    "model": "galerie.video",
+    "pk": 4,
+    "fields": {
+        "titre": "Histoire Bangoulap",
+        "youtube_id": "fkZrUvCYt4A",
+        "date": "2025-07-10"
+    }
+},
+{
+    "model": "galerie.video",
+    "pk": 5,
+    "fields": {
+        "titre": "Marole Tchamba \"Histoire d'amour\" (clip)",
+        "youtube_id": "9lRIbmhAPPo",
+        "date": "2025-07-23"
+    }
+},
+{
+    "model": "galerie.video",
+    "pk": 6,
+    "fields": {
+        "titre": "Marole Tchamba \"Sacré Cameroun\"",
+        "youtube_id": "NGTaHKTtx1g",
+        "date": "2025-07-23"
+    }
+},
+{
+    "model": "galerie.video",
+    "pk": 7,
+    "fields": {
+        "titre": "MAROLE TCHAMBA feat MEIWAY - TABAKUI & MAMI-TON",
+        "youtube_id": "5BdyDQ7XE6g",
+        "date": "2025-07-23"
+    }
+},
+{
+    "model": "dons.don",
+    "pk": 25,
+    "fields": {
+        "nom": "Martial",
+        "email": "oceanneaminata7@gmail.com",
+        "numero": "+237698275470",
+        "montant": 5000,
+        "moyen": "om",
+        "projet": 1,
+        "created_at": "2025-07-08T19:07:43.065Z"
+    }
+},
+{
+    "model": "dons.don",
+    "pk": 26,
+    "fields": {
+        "nom": "Martial",
+        "email": "oceanneaminata7@gmail.com",
+        "numero": "+237698275470",
+        "montant": 5000,
+        "moyen": "om",
+        "projet": 1,
+        "created_at": "2025-07-10T14:34:36.114Z"
+    }
+},
+{
+    "model": "dons.don",
+    "pk": 27,
+    "fields": {
+        "nom": "Martial",
+        "email": "oceanneaminata7@gmail.com",
+        "numero": "+237698275470",
+        "montant": 5000,
+        "moyen": "om",
+        "projet": 1,
+        "created_at": "2025-07-10T15:29:06.630Z"
+    }
+},
+{
+    "model": "dons.don",
+    "pk": 28,
+    "fields": {
+        "nom": "Martial",
+        "email": "ebodegiovanni@gmail.com",
+        "numero": "+237698275470",
+        "montant": 5000,
+        "moyen": "om",
+        "projet": 1,
+        "created_at": "2025-07-10T15:33:27.684Z"
+    }
+},
+{
+    "model": "dons.don",
+    "pk": 29,
+    "fields": {
+        "nom": "Kenya",
+        "email": "oceanneaminata7@gmail.com",
+        "numero": "+237698275470",
+        "montant": 7000,
+        "moyen": "om",
+        "projet": 1,
+        "created_at": "2025-07-14T15:03:42.065Z"
+    }
+},
+{
+    "model": "dons.don",
+    "pk": 30,
+    "fields": {
+        "nom": "Martial",
+        "email": "ebodegiovanni@gmail.com",
+        "numero": "+237682626492",
+        "montant": 15000,
+        "moyen": "momo",
+        "projet": 2,
+        "created_at": "2025-08-02T13:49:55.522Z"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add personnalite",
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "codename": "add_personnalite"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change personnalite",
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "codename": "change_personnalite"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete personnalite",
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "codename": "delete_personnalite"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view personnalite",
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "codename": "view_personnalite"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add projet",
+        "content_type": [
+            "projets",
+            "projet"
+        ],
+        "codename": "add_projet"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change projet",
+        "content_type": [
+            "projets",
+            "projet"
+        ],
+        "codename": "change_projet"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete projet",
+        "content_type": [
+            "projets",
+            "projet"
+        ],
+        "codename": "delete_projet"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view projet",
+        "content_type": [
+            "projets",
+            "projet"
+        ],
+        "codename": "view_projet"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add actualite",
+        "content_type": [
+            "actualites",
+            "actualite"
+        ],
+        "codename": "add_actualite"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change actualite",
+        "content_type": [
+            "actualites",
+            "actualite"
+        ],
+        "codename": "change_actualite"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete actualite",
+        "content_type": [
+            "actualites",
+            "actualite"
+        ],
+        "codename": "delete_actualite"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view actualite",
+        "content_type": [
+            "actualites",
+            "actualite"
+        ],
+        "codename": "view_actualite"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add photo",
+        "content_type": [
+            "galerie",
+            "photo"
+        ],
+        "codename": "add_photo"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change photo",
+        "content_type": [
+            "galerie",
+            "photo"
+        ],
+        "codename": "change_photo"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete photo",
+        "content_type": [
+            "galerie",
+            "photo"
+        ],
+        "codename": "delete_photo"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view photo",
+        "content_type": [
+            "galerie",
+            "photo"
+        ],
+        "codename": "view_photo"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add video",
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "codename": "add_video"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change video",
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "codename": "change_video"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete video",
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "codename": "delete_video"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view video",
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "codename": "view_video"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add academie hoteliere",
+        "content_type": [
+            "education",
+            "academiehoteliere"
+        ],
+        "codename": "add_academiehoteliere"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change academie hoteliere",
+        "content_type": [
+            "education",
+            "academiehoteliere"
+        ],
+        "codename": "change_academiehoteliere"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete academie hoteliere",
+        "content_type": [
+            "education",
+            "academiehoteliere"
+        ],
+        "codename": "delete_academiehoteliere"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view academie hoteliere",
+        "content_type": [
+            "education",
+            "academiehoteliere"
+        ],
+        "codename": "view_academiehoteliere"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add infrastructure",
+        "content_type": [
+            "education",
+            "infrastructure"
+        ],
+        "codename": "add_infrastructure"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change infrastructure",
+        "content_type": [
+            "education",
+            "infrastructure"
+        ],
+        "codename": "change_infrastructure"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete infrastructure",
+        "content_type": [
+            "education",
+            "infrastructure"
+        ],
+        "codename": "delete_infrastructure"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view infrastructure",
+        "content_type": [
+            "education",
+            "infrastructure"
+        ],
+        "codename": "view_infrastructure"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add projet educatif",
+        "content_type": [
+            "education",
+            "projeteducatif"
+        ],
+        "codename": "add_projeteducatif"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change projet educatif",
+        "content_type": [
+            "education",
+            "projeteducatif"
+        ],
+        "codename": "change_projeteducatif"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete projet educatif",
+        "content_type": [
+            "education",
+            "projeteducatif"
+        ],
+        "codename": "delete_projeteducatif"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view projet educatif",
+        "content_type": [
+            "education",
+            "projeteducatif"
+        ],
+        "codename": "view_projeteducatif"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add don",
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "codename": "add_don"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change don",
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "codename": "change_don"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete don",
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "codename": "delete_don"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view don",
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "codename": "view_don"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add projet",
+        "content_type": [
+            "dons",
+            "projet"
+        ],
+        "codename": "add_projet"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change projet",
+        "content_type": [
+            "dons",
+            "projet"
+        ],
+        "codename": "change_projet"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete projet",
+        "content_type": [
+            "dons",
+            "projet"
+        ],
+        "codename": "delete_projet"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view projet",
+        "content_type": [
+            "dons",
+            "projet"
+        ],
+        "codename": "view_projet"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add association",
+        "content_type": [
+            "associations",
+            "association"
+        ],
+        "codename": "add_association"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change association",
+        "content_type": [
+            "associations",
+            "association"
+        ],
+        "codename": "change_association"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete association",
+        "content_type": [
+            "associations",
+            "association"
+        ],
+        "codename": "delete_association"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view association",
+        "content_type": [
+            "associations",
+            "association"
+        ],
+        "codename": "view_association"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add message contact",
+        "content_type": [
+            "contact",
+            "messagecontact"
+        ],
+        "codename": "add_messagecontact"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change message contact",
+        "content_type": [
+            "contact",
+            "messagecontact"
+        ],
+        "codename": "change_messagecontact"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete message contact",
+        "content_type": [
+            "contact",
+            "messagecontact"
+        ],
+        "codename": "delete_messagecontact"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view message contact",
+        "content_type": [
+            "contact",
+            "messagecontact"
+        ],
+        "codename": "view_messagecontact"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add contenu propose",
+        "content_type": [
+            "contact",
+            "contenupropose"
+        ],
+        "codename": "add_contenupropose"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change contenu propose",
+        "content_type": [
+            "contact",
+            "contenupropose"
+        ],
+        "codename": "change_contenupropose"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete contenu propose",
+        "content_type": [
+            "contact",
+            "contenupropose"
+        ],
+        "codename": "delete_contenupropose"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view contenu propose",
+        "content_type": [
+            "contact",
+            "contenupropose"
+        ],
+        "codename": "view_contenupropose"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add visiteur",
+        "content_type": [
+            "admin_custom",
+            "visiteur"
+        ],
+        "codename": "add_visiteur"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change visiteur",
+        "content_type": [
+            "admin_custom",
+            "visiteur"
+        ],
+        "codename": "change_visiteur"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete visiteur",
+        "content_type": [
+            "admin_custom",
+            "visiteur"
+        ],
+        "codename": "delete_visiteur"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view visiteur",
+        "content_type": [
+            "admin_custom",
+            "visiteur"
+        ],
+        "codename": "view_visiteur"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add academie hoteliere",
+        "content_type": [
+            "CODEBA",
+            "academiehoteliere"
+        ],
+        "codename": "add_academiehoteliere"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change academie hoteliere",
+        "content_type": [
+            "CODEBA",
+            "academiehoteliere"
+        ],
+        "codename": "change_academiehoteliere"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete academie hoteliere",
+        "content_type": [
+            "CODEBA",
+            "academiehoteliere"
+        ],
+        "codename": "delete_academiehoteliere"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view academie hoteliere",
+        "content_type": [
+            "CODEBA",
+            "academiehoteliere"
+        ],
+        "codename": "view_academiehoteliere"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add projet educatif",
+        "content_type": [
+            "CODEBA",
+            "projeteducatif"
+        ],
+        "codename": "add_projeteducatif"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change projet educatif",
+        "content_type": [
+            "CODEBA",
+            "projeteducatif"
+        ],
+        "codename": "change_projeteducatif"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete projet educatif",
+        "content_type": [
+            "CODEBA",
+            "projeteducatif"
+        ],
+        "codename": "delete_projeteducatif"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view projet educatif",
+        "content_type": [
+            "CODEBA",
+            "projeteducatif"
+        ],
+        "codename": "view_projeteducatif"
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$oau1ulAY02IGaz7Q176BAc$CN2GwEKnj/AfUTtzz5RhQfTe1FQwfc+6YhZ/KO5N6gU=",
+        "last_login": "2025-08-11T14:15:12.503Z",
+        "is_superuser": true,
+        "username": "KUIKA",
+        "first_name": "",
+        "last_name": "",
+        "email": "ketchadjiguymartial@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-07-06T20:20:57.922Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$R0wXQLxwotintWY3PZylqn$+vBinwBr/586pahb7p+WY1RMmour4H2DJDDz573Pdso=",
+        "last_login": "2025-08-02T12:20:59.279Z",
+        "is_superuser": true,
+        "username": "Martial",
+        "first_name": "",
+        "last_name": "",
+        "email": "ketchadjiguymartial@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-08-01T06:44:36.418Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$870000$fbOQSNHWcng3KW4k6iXUB8$QQ2Y4oRSNUUQlAiEh4udMMYJjx0vFfJWpY1sp87hyio=",
+        "last_login": "2025-08-04T12:59:52.197Z",
+        "is_superuser": false,
+        "username": "kenya",
+        "first_name": "",
+        "last_name": "",
+        "email": "ketchadjiguymartial@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-08-01T08:00:15.685Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2025-07-06T20:24:57.841Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "projets",
+            "projet"
+        ],
+        "object_id": "1",
+        "object_repr": "construction des routes",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2025-07-06T20:30:16.544Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "projets",
+            "projet"
+        ],
+        "object_id": "2",
+        "object_repr": "construction des routes",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2025-07-07T00:31:21.792Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "projets",
+            "projet"
+        ],
+        "object_id": "2",
+        "object_repr": "construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.176Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "24",
+        "object_repr": "Martial - 5000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.176Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "23",
+        "object_repr": "Martial - 5000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.177Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "22",
+        "object_repr": "Martial - 5000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.177Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "21",
+        "object_repr": "Martial - 5000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.177Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "20",
+        "object_repr": "Martial - 5000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.177Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "19",
+        "object_repr": "Kenya - 5000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.177Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "18",
+        "object_repr": "Kenya - 5000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.177Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "17",
+        "object_repr": "Kenya - 5000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.177Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "16",
+        "object_repr": "Kenya - 5000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.178Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "15",
+        "object_repr": "Martial - 5000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.178Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "14",
+        "object_repr": "Martial - 5000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.178Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "13",
+        "object_repr": "Martial - 5000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.178Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "12",
+        "object_repr": "Martial - 5000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.178Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "11",
+        "object_repr": "Martial - 5000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.178Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "10",
+        "object_repr": "Martial - 5000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.178Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "9",
+        "object_repr": "Martial - 2000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.178Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "8",
+        "object_repr": "Kenya - 2000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.179Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "7",
+        "object_repr": "Kenya - 2000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.179Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "6",
+        "object_repr": "Kenya - 2000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.179Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "5",
+        "object_repr": "Kenya - 2000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.179Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "4",
+        "object_repr": "Kenya - 2000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.179Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "3",
+        "object_repr": "Kenya - 2000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.179Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "2",
+        "object_repr": "Kenya - 2000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2025-07-08T18:56:36.179Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "dons",
+            "don"
+        ],
+        "object_id": "1",
+        "object_repr": "Kenya - 2000.00 FCFA pour construction des routes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2025-07-09T12:17:33.955Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "actualites",
+            "actualite"
+        ],
+        "object_id": "1",
+        "object_repr": "Actualite object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2025-07-09T12:33:09.393Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "actualites",
+            "actualite"
+        ],
+        "object_id": "1",
+        "object_repr": "Actualite object (1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2025-07-09T12:50:04.145Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "actualites",
+            "actualite"
+        ],
+        "object_id": "2",
+        "object_repr": "Actualite object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2025-07-09T12:51:48.388Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "actualites",
+            "actualite"
+        ],
+        "object_id": "2",
+        "object_repr": "Actualite object (2)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Contenu\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2025-07-09T13:04:00.492Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "actualites",
+            "actualite"
+        ],
+        "object_id": "3",
+        "object_repr": "Actualite object (3)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2025-07-09T14:55:34.688Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "object_id": "1",
+        "object_repr": "Sa majeste YONKEU KUIKA Jean-Roi de Bangoulap",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2025-07-09T22:26:16.573Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "object_id": "1",
+        "object_repr": "Sa majeste YONKEU KUIKA Jean-Roi de Bangoulap",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2025-07-09T22:43:19.956Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "object_id": "2",
+        "object_repr": "Marole Tchamba",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2025-07-09T22:55:19.663Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "object_id": "3",
+        "object_repr": "Ministre TCHATAT  Clobert",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2025-07-09T22:55:25.259Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "object_id": "3",
+        "object_repr": "Ministre TCHATAT  Clobert",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2025-07-09T22:55:58.143Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "object_id": "2",
+        "object_repr": "Marole Tchamba",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Fonction\", \"Biographie\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2025-07-09T22:56:33.612Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "object_id": "1",
+        "object_repr": "Sa majeste YONKEU KUIKA Jean-Roi de Bangoulap",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Fonction\", \"Biographie\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2025-07-09T23:07:53.555Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "associations",
+            "association"
+        ],
+        "object_id": "1",
+        "object_repr": "ADB – Association pour le Développement de Bangoulap",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2025-07-09T23:08:36.734Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "associations",
+            "association"
+        ],
+        "object_id": "2",
+        "object_repr": "ADB-France",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2025-07-09T23:09:17.685Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "associations",
+            "association"
+        ],
+        "object_id": "3",
+        "object_repr": "ADB-Canada",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2025-07-09T23:09:46.924Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "associations",
+            "association"
+        ],
+        "object_id": "4",
+        "object_repr": "ADB-USA",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2025-07-09T23:10:20.228Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "associations",
+            "association"
+        ],
+        "object_id": "5",
+        "object_repr": "Comité des Jeunes de Bangoulap (CJB)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2025-07-09T23:10:47.619Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "associations",
+            "association"
+        ],
+        "object_id": "6",
+        "object_repr": "Association des Femmes Dynamiques de Bangoulap (AFDB)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2025-07-09T23:11:19.290Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "associations",
+            "association"
+        ],
+        "object_id": "7",
+        "object_repr": "Association des Élites Bangoulap (AEB)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2025-07-09T23:11:46.228Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "associations",
+            "association"
+        ],
+        "object_id": "8",
+        "object_repr": "Comité de Développement Local de Bangoulap (CDLB)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2025-07-10T00:28:06.217Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "photo"
+        ],
+        "object_id": "1",
+        "object_repr": "pirate",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2025-07-10T09:21:07.004Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "object_id": "3",
+        "object_repr": "Ministre TCHATAT  Clobert",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Fonction\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2025-07-10T09:22:49.794Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "object_id": "3",
+        "object_repr": "Ministre TCHATAT  Clobert",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Fonction\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2025-07-10T09:23:26.939Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "object_id": "1",
+        "object_repr": "Sa majeste YONKEU KUIKA Jean-Roi de Bangoulap",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Fonction\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2025-07-10T09:23:51.035Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "object_id": "3",
+        "object_repr": "Ministre TCHATAT  Clobert",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Fonction\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2025-07-10T09:48:43.726Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "photo"
+        ],
+        "object_id": "1",
+        "object_repr": "pirate",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Evenement\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2025-07-10T09:48:54.271Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "photo"
+        ],
+        "object_id": "1",
+        "object_repr": "pirate",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2025-07-10T10:13:31.290Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "1",
+        "object_repr": "Message de sa Majeste YONKEU KUIKA",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2025-07-10T10:36:10.644Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "photo"
+        ],
+        "object_id": "1",
+        "object_repr": "Danse Traditionnelle",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Titre\", \"Evenement\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2025-07-10T10:37:54.587Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "1",
+        "object_repr": "Message de sa Majeste YONKEU KUIKA",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Youtube id\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2025-07-10T10:38:45.822Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "1",
+        "object_repr": "Message de sa Majeste YONKEU KUIKA",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Youtube id\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2025-07-10T10:41:14.949Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "1",
+        "object_repr": "Message de sa Majeste YONKEU KUIKA",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Youtube id\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2025-07-10T10:42:20.324Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "2",
+        "object_repr": "Martial",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2025-07-10T10:50:19.591Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "2",
+        "object_repr": "Martial",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2025-07-10T11:11:45.962Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "1",
+        "object_repr": "Message de sa Majeste YONKEU KUIKA",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Youtube id\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2025-07-10T11:13:57.389Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "1",
+        "object_repr": "Message de sa Majeste YONKEU KUIKA",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Youtube id\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2025-07-10T11:27:08.956Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "3",
+        "object_repr": "La dance Kesou",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2025-07-10T11:28:25.440Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "3",
+        "object_repr": "La dance Kesou",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Youtube id\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2025-07-10T11:31:09.418Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "1",
+        "object_repr": "Message de sa Majeste YONKEU KUIKA",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Youtube id\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2025-07-10T11:31:58.353Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "1",
+        "object_repr": "Message de sa Majeste YONKEU KUIKA",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2025-07-10T11:32:04.789Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "3",
+        "object_repr": "La dance Kesou",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Youtube id\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2025-07-10T11:34:29.864Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "3",
+        "object_repr": "La dance Kesou",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Youtube id\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2025-07-10T11:42:17.838Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "3",
+        "object_repr": "La dance Kesou",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Youtube id\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2025-07-10T11:42:35.600Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "1",
+        "object_repr": "Message de sa Majeste YONKEU KUIKA",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Youtube id\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2025-07-10T12:10:45.342Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "4",
+        "object_repr": "Histoire Bangoulap",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2025-07-10T12:13:33.722Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "photo"
+        ],
+        "object_id": "2",
+        "object_repr": "Sa Majeste YONKEU KUIKA",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2025-07-14T14:58:05.885Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "projets",
+            "projet"
+        ],
+        "object_id": "1",
+        "object_repr": "construction des routes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2025-07-14T18:43:13.991Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "projets",
+            "projet"
+        ],
+        "object_id": "2",
+        "object_repr": "Améliorer la santé des habitants de Bangoulap",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2025-07-14T18:44:13.076Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "projets",
+            "projet"
+        ],
+        "object_id": "2",
+        "object_repr": "Améliorer la santé des habitants de Bangoulap",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2025-07-14T18:59:31.194Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "projets",
+            "projet"
+        ],
+        "object_id": "1",
+        "object_repr": "Projets d’accès à l’eau potable",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Titre\", \"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2025-07-14T20:15:48.000Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "projets",
+            "projet"
+        ],
+        "object_id": "3",
+        "object_repr": "Projets agricoles et économiques",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2025-07-14T20:18:28.198Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "photo"
+        ],
+        "object_id": "3",
+        "object_repr": "désignation du Roi",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+        "action_time": "2025-07-14T20:37:02.121Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "photo"
+        ],
+        "object_id": "4",
+        "object_repr": "Fête traditionnelle du peuple bangoulap",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+        "action_time": "2025-07-14T20:38:32.043Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "photo"
+        ],
+        "object_id": "4",
+        "object_repr": "Fête traditionnelle du peuple bangoulap",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+        "action_time": "2025-07-21T14:33:35.201Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "object_id": "2",
+        "object_repr": "Marole Tchamba",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Photo\", \"Fonction\", \"Biographie\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+        "action_time": "2025-07-21T14:42:58.449Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "object_id": "2",
+        "object_repr": "Marole Tchamba",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Biographie\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+        "action_time": "2025-07-21T14:45:14.725Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "object_id": "2",
+        "object_repr": "Marole Tchamba",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Biographie\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+        "action_time": "2025-07-21T14:48:04.572Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "object_id": "2",
+        "object_repr": "Marole Tchamba",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Biographie\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+        "action_time": "2025-07-23T10:22:28.712Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "photo"
+        ],
+        "object_id": "5",
+        "object_repr": "Marole TCHAMBA",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+        "action_time": "2025-07-23T10:33:07.717Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "5",
+        "object_repr": "Marole Tchamba \"Histoire d'amour\" (clip)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+        "action_time": "2025-07-23T10:35:44.465Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "6",
+        "object_repr": "Marole Tchamba \"Sacré Cameroun\"",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+        "action_time": "2025-07-23T10:37:55.206Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "galerie",
+            "video"
+        ],
+        "object_id": "7",
+        "object_repr": "MAROLE TCHAMBA feat MEIWAY - TABAKUI & MAMI-TON",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+        "action_time": "2025-07-23T14:05:58.606Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "object_id": "2",
+        "object_repr": "Marole Tchamba",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Biographie\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+        "action_time": "2025-07-23T14:07:26.195Z",
+        "user": [
+            "KUIKA"
+        ],
+        "content_type": [
+            "personnalites",
+            "personnalite"
+        ],
+        "object_id": "2",
+        "object_repr": "Marole Tchamba",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Biographie\"]}}]"
+    }
+}
+]

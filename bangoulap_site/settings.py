@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'projets',
     'actualites',
     'galerie',
-    'education',
+    'CODEBA',
     'dons',
     'associations',
     'contact',
