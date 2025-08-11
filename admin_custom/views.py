@@ -7,7 +7,7 @@ from django.utils import timezone
 from django.db.models import Sum
 from django.template import loader
 from django.urls import reverse
-
+from django.db.models.functions import ExtractMonth, ExtractYear
 from .forms import CustomLoginForm, UserCreateForm, UserUpdateForm
 
 # Import des modèles utilisés dans le tableau de bord
@@ -55,15 +55,17 @@ def dashboard(request):
     total_personnalites = Personnalite.objects.count()
 
     six_mois = timezone.now() - timezone.timedelta(days=180)
+
+    # ✅ Compatible PostgreSQL, SQLite et MySQL
     dons_recents = (
         Don.objects.filter(created_at__gte=six_mois)
-        .extra(select={'month': "strftime('%%m', created_at)"})
-        .values('month')
+        .annotate(month=ExtractMonth('created_at'), year=ExtractYear('created_at'))
+        .values('month', 'year')
         .annotate(total=Sum('montant'))
-        .order_by('month')
+        .order_by('year', 'month')
     )
 
-    labels = [f"Mois {mois['month']}" for mois in dons_recents]
+    labels = [f"{mois['month']:02d}/{mois['year']}" for mois in dons_recents]
     dons_par_mois = [mois["total"] for mois in dons_recents]
 
     derniers_dons = Don.objects.select_related("projet").order_by("-created_at")[:10]
