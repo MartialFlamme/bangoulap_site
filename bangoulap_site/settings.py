@@ -103,25 +103,16 @@ WSGI_APPLICATION = 'bangoulap_site.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 import dj_database_url
 
-if os.getenv("RENDER"):  # En prod
-    DATABASES = {
-        'default': dj_database_url.config(
-            default=os.getenv("DATABASE_URL"),
-            conn_max_age=600,
-            ssl_require=True
-        )
-    }
-else:  # En local
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'bangoulap_db',
-            'USER': 'martial_user',
-            'PASSWORD': 'Martial2002',
-            'HOST': 'localhost',
-            'PORT': '5432',
-        }
-    }
+DATABASES = {
+    'default': dj_database_url.config(
+        default=os.environ.get(
+            'DATABASE_URL',
+            'postgresql://martial_user:Martial2002@localhost:5432/bangoulap_db'
+        ),
+        conn_max_age=600,
+    )
+}
+
 
 
 
