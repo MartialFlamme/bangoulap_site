@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-u6&p#o!x@z@3xk=3)j#s6
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = ['bangoulap-site.onrender.com', '127.0.0.1', 'localhost']
 
@@ -105,11 +105,9 @@ import dj_database_url
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get(
-            'DATABASE_URL',
-            'postgresql://martial_user:Martial2002@localhost:5432/bangoulap_db'
-        ),
+        default='postgresql://martial_user:Martial2002@localhost:5432/bangoulap_db',
         conn_max_age=600,
+        ssl_require=True  # True sur Render, False en local si pas de SSL
     )
 }
 
