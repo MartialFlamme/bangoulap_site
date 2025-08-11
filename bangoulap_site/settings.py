@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'projets',
     'actualites',
     'galerie',
-    'education',
+    'CODEBA',
     'dons',
     'associations',
     'contact',
@@ -104,10 +104,15 @@ WSGI_APPLICATION = 'bangoulap_site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'bangoulap_db',
+        'USER': 'martial_user',
+        'PASSWORD': 'Martial2002',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -158,7 +163,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 LOGIN_URL = '/admin-custom/login/'
 LOGIN_REDIRECT_URL = '/admin-custom/dashboard/'
 LOGOUT_REDIRECT_URL = '/'
-CSRF_FAILURE_VIEW = 'admin_custom.views.custom_permission_denied_view'
+CSRF_FAILURE_VIEW = "django.views.csrf.csrf_failure"
 
 
 

@@ -13,7 +13,7 @@ urlpatterns = [
     path('actualites/', include('actualites.urls', namespace='actualites')),
     path('personnalites/', include('personnalites.urls')),
     path('associations/', include('associations.urls')),
-    path('education/', include('education.urls')),
+    path('CODEBA/', include(('CODEBA.urls', 'CODEBA'), namespace='CODEBA')),
     path('galerie/', include('galerie.urls')),
     path("contact/", include("contact.urls", namespace="contact")),
     path('dons/', include('dons.urls', namespace='dons')),
