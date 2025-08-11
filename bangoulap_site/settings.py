@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-u6&p#o!x@z@3xk=3)j#s6
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = True
 
 ALLOWED_HOSTS = ['bangoulap-site.onrender.com', '127.0.0.1', 'localhost']
 
@@ -101,18 +101,13 @@ WSGI_APPLICATION = 'bangoulap_site.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-import dj_database_url
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default='postgresql://martial_user:Martial2002@localhost:5432/bangoulap_db',
-        conn_max_age=600,
-        ssl_require=True  # True sur Render, False en local si pas de SSL
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
-
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -163,7 +158,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 LOGIN_URL = '/admin-custom/login/'
 LOGIN_REDIRECT_URL = '/admin-custom/dashboard/'
 LOGOUT_REDIRECT_URL = '/'
-CSRF_FAILURE_VIEW = "django.views.csrf.csrf_failure"
+CSRF_FAILURE_VIEW = 'admin_custom.views.custom_permission_denied_view'
 
 
 
