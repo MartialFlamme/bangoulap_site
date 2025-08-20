@@ -6,6 +6,17 @@
 <section class="max-w-6xl mx-auto px-4 py-10"><br><br>
     <h1 class="text-3xl font-bold text-green-800 mb-8 scroll-anim">👥 Nos personnalités marquantes</h1>
 
+    <!-- Barre de recherche -->
+    <form method="get" action="" class="mb-8">
+        <input 
+            type="text" 
+            name="q" 
+            placeholder="Rechercher une personnalité..." 
+            value="{{ request.GET.q }}" 
+            class="w-full sm:w-1/2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-700 focus:border-transparent transition"
+        >
+    </form>
+
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {% for personne in personnalites %}
         <a href="{% url 'personnalites:detail' slug=personne.slug %}" class="group block bg-white rounded-lg shadow hover:shadow-xl transition p-4 text-center scroll-anim">

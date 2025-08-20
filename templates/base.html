@@ -174,7 +174,7 @@
             <!-- Accueil -->
       <div class="relative group">
         <a href="{% url 'core:accueil' %}" class="hover:text-yellow-300 transition">🏠 Accueil</a>
-        <div class="absolute hidden group-hover:block bg-green-800 mt-2 rounded shadow-md z-50 min-w-[200px]">
+        <div class="absolute left-0 top-full hidden group-hover:flex flex-col bg-green-800 rounded shadow-md z-50 min-w-[200px]">
           <a href="{% url 'histoire:origines' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">📜 Origines</a>
           <a href="{% url 'histoire:sites_touristiques' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">🏞️ Sites touristiques</a>
         </div>
@@ -182,7 +182,7 @@
       <!-- 📚 Actualités -->
       <div class="relative group">
         <a href="{% url 'actualites:liste' %}" class="hover:text-yellow-300 transition">📰 Actualités</a>
-        <div class="absolute hidden group-hover:block bg-green-800 mt-2 rounded shadow-md z-50 min-w-[200px]">
+        <div class="absolute left-0 top-full hidden group-hover:flex flex-col bg-green-800 rounded shadow-md z-50 min-w-[200px]">
           <a href="{% url 'actualites:liste' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">🗂️ Liste des actualités</a>
           <a href="{% url 'actualites:calendrier' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">📅 Calendrier</a>
         </div>
@@ -191,7 +191,7 @@
       <!-- 🎭 Culture -->
       <div class="relative group">
         <a href="{% url 'culture:danses' %}" class="hover:text-yellow-300 transition">🎭 Culture</a>
-        <div class="absolute hidden group-hover:block bg-green-800 mt-2 rounded shadow-md z-50 min-w-[200px]">
+        <div class="absolute left-0 top-full hidden group-hover:flex flex-col bg-green-800 rounded shadow-md z-50 min-w-[200px]">
           <a href="{% url 'culture:danses' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">💃 Danses</a>
           <a href="{% url 'culture:festivals' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">🎉 Festivals</a>
           <a href="{% url 'culture:structure' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">🏛️ Structure</a>
@@ -201,7 +201,7 @@
       <!-- 🤝 Associations -->
       <div class="relative group">
         <a href="{% url 'associations:liste' %}" class="hover:text-yellow-300 transition">🤝 Associations</a>
-        <div class="absolute hidden group-hover:block bg-green-800 mt-2 rounded shadow-md z-50 min-w-[250px]">
+        <div class="absolute left-0 top-full hidden group-hover:flex flex-col bg-green-800 rounded shadow-md z-50 min-w-[250px]">
           <a href="{% url 'associations:liste' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">📋 Liste des associations</a>
           <a href="{% url 'personnalites:liste' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">👤 Liste des personnalités</a>
         </div>
@@ -210,7 +210,7 @@
       <!-- 🎓 CODEBA -->
       <div class="relative group">
         <a href="{% url 'CODEBA:presentation_du_CODEBA' %}" class="hover:text-yellow-300 transition">🏫 CODEBA</a>
-        <div class="absolute hidden group-hover:block bg-green-800 mt-2 rounded shadow-md z-50 min-w-[250px]">
+        <div class="absolute left-0 top-full hidden group-hover:flex flex-col bg-green-800 rounded shadow-md z-50 min-w-[250px]">
           <a href="{% url 'CODEBA:presentation_du_CODEBA' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">📚 Presentation du CODEBA</a>
           <a href="{% url 'CODEBA:activite_du_CODEBA' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">🏫 Activite du CODEBA</a>
         </div>
@@ -218,7 +218,7 @@
    <!--  service -->
         <div class="relative group">
             <a href="{% url 'projets:liste_projets' %}" class="hover:text-yellow-300 transition">📩 Services</a>
-            <div class="absolute hidden group-hover:block bg-green-800 mt-2 rounded shadow-md z-50 min-w-[200px]">
+            <div class="absolute left-0 top-full hidden group-hover:flex flex-col bg-green-800 rounded shadow-md z-50 min-w-[200px]">
               <a href="{% url 'projets:liste_projets' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">🚧 Liste des projets</a>
               <a href="{% url 'contact:contact' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">📬 Contact</a>
               <a href="{% url 'dons:formulaire' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">💸 Faire un don</a>
@@ -226,8 +226,8 @@
         </div>
               <!-- 🖼️ Galerie -->
       <div class="relative group">
-        <a href="{% url 'galerie:photos' %}" class="hover:text-yellow-300 transition">🖼️ Galerie</a>
-        <div class="absolute hidden group-hover:block bg-green-800 mt-2 rounded shadow-md z-50 min-w-[200px]">
+        <a href="{% url 'galerie:photos' %}" class="hover:text-yellow-300 transition ">🖼️ Galerie</a>
+        <div class="absolute left-0 top-full hidden group-hover:flex flex-col bg-green-800 rounded shadow-md z-50 min-w-[200px]">
           <a href="{% url 'galerie:photos' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">📸 Photos</a>
           <a href="{% url 'galerie:videos' %}" class="block px-4 py-2 text-sm hover:bg-green-700 transition">🎥 Vidéos</a>
         </div>
@@ -293,7 +293,7 @@
 
     <!-- Éducation -->
     <details class="bg-green-800 rounded">
-      <summary class="text-white px-4 py-2 cursor-pointer hover:text-yellow-300 transition">CODEBA</summary>
+      <summary class="text-white px-4 py-2 cursor-pointer hover:text-yellow-300 transition">🏫 CODEBA</summary>
       <div class="ml-4 text-sm text-white py-2">
         <a href="{% url 'CODEBA:presentation_du_CODEBA' %}" class="block px-2 py-1 hover:bg-green-700 rounded">📚 Presentation du CODEBA</a>
         <a href="{% url 'CODEBA:activite_du_CODEBA' %}" class="block px-2 py-1 hover:bg-green-700 rounded">🏫 Activite du CODEBA</a>
