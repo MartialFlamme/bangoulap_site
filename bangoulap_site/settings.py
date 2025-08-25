@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-u6&p#o!x@z@3xk=3)j#s6
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['bangoulap-site.onrender.com', '127.0.0.1', 'localhost']
 
