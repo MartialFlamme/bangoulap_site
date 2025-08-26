@@ -25,6 +25,8 @@ urlpatterns = [
 # ✅ Ajoute ceci EN DEHORS de urlpatterns
 handler403 = "admin_custom.views.custom_permission_denied_view"
 
+# Servir les fichiers médias et statiques seulement si DEBUG=True ou pour petite prod
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

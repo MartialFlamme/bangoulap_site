@@ -25,9 +25,9 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-u6&p#o!x@z@3xk=3)j#s6
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get("DJANGO_DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ['bangoulap-site.onrender.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS","bangoulap-site.onrender.com,127.0.0.1,localhost").split(",")
 
 
 # Application definition
@@ -168,7 +168,7 @@ CSRF_FAILURE_VIEW = 'admin_custom.views.custom_permission_denied_view'
 import os
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = BASE_DIR / 'media'
 
 TEMPLATES[0]['DIRS'] = [ BASE_DIR / "templates" ]
 
